@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "garet";
+  src: url("../res/fonts/Garet.ttf") format("truetype");
+}
+@font-face {
+  font-family: "psans";
+  src: url("../res/fonts/PublicSans.ttf") format("truetype");
+}
+div, span {
+  display: flex;
+  font-size: 14px;
+  font-family: "garet";
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  height: fit-content;
+  padding: 0px 80px;
+  flex-direction: column;
+}
+.c {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.b-btn-big {
+  width: fit-content;
+  height: 60px;
+  font-size: 18px;
+  padding: 0px 12px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.w-btn-big {
+  width: fit-content;
+  height: 60px;
+  font-size: 18px;
+  padding: 0px 12px;
+  color: #000;
+  background-color: #fff;
+  outline: solid 1px #000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
