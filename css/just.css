@@ -22,7 +22,7 @@
     align-items: center;
 }
 .f-list {
-    width: 320px;
+    margin-right: 140px;
     border-radius: 16px;
     box-shadow: 0 5px 5px #00000020, -5px -5px 5px #00000020;
     padding: 12px;
@@ -30,6 +30,7 @@
     z-index: 1;
 }
 .follow-list {
+    width: 360px;
     flex-direction: column;
     gap: 12px;
     overflow-y: scroll;
@@ -54,7 +55,15 @@
 .follow-btn {
     height: 36px;
     padding: 0px 12px;
-    background-color: #e6e8ec;
+    outline: solid 2px #e6e8ec;
     border-radius: 8px;
     margin-left: auto;
+    margin-right: 2px;
+    transition: 0.2s;
+}
+.follow-btn:focus {
+    outline: solid 2px #e6e8ec;
+}
+.followed {
+    background-color: #e6e8ec;
 }

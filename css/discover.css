@@ -32,6 +32,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  margin-right: 140px;
 }
 .d-img-c {
   width: 420px;
@@ -72,4 +73,8 @@ h1 {
   position: absolute;
   left: -120px;
   top: 60px;
+}
+.st {
+  position: absolute;
+  right: -140px;
 }

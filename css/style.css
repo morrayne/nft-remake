@@ -53,4 +53,6 @@ body {
   align-items: center;
   gap: 12px;
 }
-
+/* span:focus , div:focus , button:focus {
+  background-color: solid 2px #ff0000;
+} */
