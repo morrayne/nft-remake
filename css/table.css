@@ -1,77 +1,93 @@
 .table {
-    width: 100%;
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
 }
 .tbod {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .td-img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
 }
 .td-name {
-    flex-direction: column;
-    gap: 12px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .tr1 {
-    display: flex;
+  display: flex;
 }
 .td1 {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    gap: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: 12px;
 }
 .td2 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .td3 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .td4 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .td5 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .td6 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .td-div {
-    flex-direction: column;
-    justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .t-text {
-    font-size: 24px;
-    align-items: center;
+  font-size: 24px;
+  align-items: center;
 }
 .t-b-text {
-    font-size: 16px;
-    color: #cbcbcb;
+  font-size: 16px;
+  color: #cbcbcb;
 }
 .tt-div {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
 }
 .tt-svg {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
+
+@media (max-width: 1120px) {
+  .td5 {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .td3 {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+    .td2 {
+      display: none;
+    }
+  }

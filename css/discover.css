@@ -78,3 +78,8 @@ h1 {
   position: absolute;
   right: -140px;
 }
+@media (max-width: 1020px) {
+  .discover {
+    margin-top: 160px;
+  }
+}

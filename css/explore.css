@@ -1,53 +1,59 @@
 .explore {
-    width: 100%;
-    margin-top: 120px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .h2-text {
-    font-family: "Poppins";
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 120%;
-  }
-  .explore-filter {
-    margin-top: 48px;
-    gap: 24px;
+  width: 100%;
+  margin-top: 120px;
+  flex-direction: column;
+  align-items: center;
+}
+.h2-text {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 120%;
+}
+.explore-filter {
+  margin-top: 48px;
+  gap: 24px;
+  justify-content: center;
+}
+.explore-holder {
+  width: 100%;
+  margin-top: 80px;
+  gap: 48px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.holder {
+  padding: 12px;
+  box-shadow: 0 5px 5px #00000020, -5px -5px 5px #00000020;
+  border-radius: 16px;
+  flex-direction: column;
+  gap: 8px;
+}
+.holder-img {
+  width: 256px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+.h3-text {
+  width: fit-content;
+  height: fit-content;
+  font-size: 24px;
+}
+.holder-b {
+  justify-content: space-between;
+}
+.h-l {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.gem {
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 790px) {
+  .explore-holder {
     justify-content: center;
   }
-  .explore-holder {
-    width: 100%;
-    margin-top: 80px;
-    gap: 48px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .holder {
-    padding: 12px;
-    box-shadow: 0 5px 5px #00000020, -5px -5px 5px #00000020;
-    border-radius: 16px;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .holder-img {
-    width: 256px;
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-  }
-  .h3-text {
-    width: fit-content;
-    height: fit-content;
-    font-size: 24px;
-  }
-  .holder-b {
-    justify-content: space-between;
-  }
-  .h-l {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .gem {
-    width: 100%;
-    gap: 12px;
-    align-items: center;
-  }
+}
