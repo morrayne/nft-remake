@@ -20,13 +20,14 @@ body {
   width: 100%;
   height: 100%;
   height: fit-content;
-  padding: 0px 80px;
+  
   flex-direction: column;
 }
 .c {
   position: relative;
   flex-direction: column;
   align-items: center;
+  margin: 0px 80px;
 }
 .b-btn-big {
   width: fit-content;
@@ -53,6 +54,28 @@ body {
   align-items: center;
   gap: 12px;
 }
-/* span:focus , div:focus , button:focus {
-  background-color: solid 2px #ff0000;
-} */
+.w-btn {
+  width: fit-content;
+  height: 60px;
+  font-size: 18px;
+  padding: 0px 12px;
+  color: #000;
+  background-color: #fff;
+  outline: solid 1px #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.w-btn-1 {
+  width: fit-content;
+  height: 60px;
+  font-size: 18px;
+  padding: 0px 12px;
+  color: #fff;
+  outline: solid 1px #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
