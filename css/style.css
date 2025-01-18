@@ -14,6 +14,7 @@ div, span {
 body {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1920px;
@@ -82,5 +83,23 @@ body {
 @media (max-width: 1120px) {
   .c {
     margin: 0px 40px;
+  }
+}
+@media (max-width: 660px) {
+  .header-nav-text {
+    font-size: 16px;
+  }
+  .b-btn-big {
+    height: 40px;
+    font-size: 16px;
+  }
+  .w-btn-big {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .c {
+    margin: 0px 24px;
   }
 }

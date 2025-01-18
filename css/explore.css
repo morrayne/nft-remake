@@ -56,4 +56,17 @@
   .explore-holder {
     justify-content: center;
   }
+  .explore-filter {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 720px) {
+  .h2-text {
+    font-size: 48px;
+  }
+}
+@media (max-width: 560px) {
+  .h2-text {
+    font-size: 36px;
+  }
 }

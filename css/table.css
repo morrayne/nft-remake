@@ -87,7 +87,12 @@
   }
 }
 @media (max-width: 800px) {
-    .td2 {
-      display: none;
-    }
+  .td2 {
+    display: none;
   }
+}
+@media (max-width: 560px) {
+  .td4 {
+    display: none;
+  }
+}

@@ -17,26 +17,30 @@ footer {
   width: 60px;
   aspect-ratio: 1 / 1;
 }
-.w-text {
-  color: #fff;
-  font-size: 24px;
-  align-items: center;
-}
 .g-text {
   color: #cbcbcb;
   font-size: 24px;
   align-items: center;
+  white-space: nowrap;
 }
 .footer-t-links {
   gap: 48px;
   margin-left: auto;
 }
 .footer-b-links {
-  margin-left: auto;
   gap: 24px;
 }
+.footer-b {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 
 @media (max-width: 1120px) {
+  footer {
+    padding: 12px 40px;
+  }
   .footer-t-links {
     gap: 18px;
   }
@@ -49,5 +53,15 @@ footer {
   .footer-t-links {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+@media (max-width: 660px) {
+  .g-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 12px 24px;
   }
 }

@@ -28,6 +28,9 @@ h1 {
   flex-direction: column;
   gap: 8px;
 }
+.d-stat-text {
+  font-size: 36px;
+}
 .discover-r {
   flex-direction: column;
   justify-content: space-between;
@@ -81,5 +84,31 @@ h1 {
 @media (max-width: 1020px) {
   .discover {
     margin-top: 160px;
+  }
+}
+@media (max-width: 720px) {
+  .h1-text {
+    font-size: 72px;
+  }
+}
+@media (max-width: 660px) {
+  h1 {
+    display: flex;
+    align-items: center;
+  }
+  .h1-text {
+    font-size: 56px;
+  }
+}
+@media (max-width: 560px) {
+  .discover {
+    margin-top: 196px;
+  }
+  .d-stat {
+    font-size: 24px;
+  }
+  .d-img-c {
+    width: 360px;
+    height: 360px;
   }
 }
