@@ -93,3 +93,9 @@
     margin-right: 0;
   }
 }
+@media (max-width: 560px) {
+  .follow-list {
+    width: 280px;
+    gap: 24px ;
+  }
+}

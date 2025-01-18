@@ -95,4 +95,7 @@
   .td4 {
     display: none;
   }
+  .t-text {
+    font-size: 20px;
+  }
 }

@@ -59,9 +59,13 @@ footer {
   .g-text {
     font-size: 16px;
   }
+  .footer-b {
+    justify-content: center;
+  }
 }
 @media (max-width: 480px) {
   footer {
     padding: 12px 24px;
   }
+  
 }

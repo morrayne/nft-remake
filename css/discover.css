@@ -24,7 +24,7 @@ h1 {
   gap: 24px;
   margin-top: 36px;
 }
-.d-stat { 
+.d-stat {
   flex-direction: column;
   gap: 8px;
 }
@@ -99,16 +99,32 @@ h1 {
   .h1-text {
     font-size: 56px;
   }
+  .d-stat-text {
+    font-size: 24px;
+  }
+  .st {
+    display: none;
+  }
 }
 @media (max-width: 560px) {
   .discover {
     margin-top: 196px;
   }
-  .d-stat {
-    font-size: 24px;
+  .d-img-c {
+    width: 320px;
+    height: 320px;
+  }
+}
+@media (max-width: 420px) {
+  .d-btn-c {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .d-btn-c {
+    flex-wrap: wrap;
   }
   .d-img-c {
-    width: 360px;
-    height: 360px;
+    width: 240px;
+    height: 240px;
   }
 }

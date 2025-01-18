@@ -69,3 +69,11 @@
     height: 40px;
   }
 }
+@media (max-width: 420px) {
+  .header-r {
+    flex-wrap: wrap;
+  }
+  .header-l {
+    flex-wrap: wrap;
+  }
+}

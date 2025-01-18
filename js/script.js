@@ -1,9 +1,3 @@
-document.querySelectorAll(".d-stat").forEach(function (el) {
-  if (el.firstElementChild) {
-    el.firstElementChild.style.fontSize = "36px";
-  }
-});
-
 const imgScr = [
   "./res/img/icons/BlueStones.png",
   "./res/img/icons/GreenBubbles.png",
