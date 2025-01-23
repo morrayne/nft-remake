@@ -169,9 +169,6 @@ footer {
   .footer-t .w-14 {
     display: none;
   }
-  .header-nav {
-    width: 100%
-  }
 }
 @media (max-width: 480px) {
   .header-nav .t-24 {

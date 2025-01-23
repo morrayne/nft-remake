@@ -46,6 +46,7 @@ h1 {
   height: 100%;
   aspect-ratio: 1 / 1;
   z-index: 2;
+  transition: 0.4s;
 }
 .d-point-c {
   width: fit-content;
@@ -94,7 +95,7 @@ h1 {
 .explore-holder {
   width: 100%;
   margin-top: 60px;
-  gap: 36px;
+  gap: 24px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -128,6 +129,14 @@ h1 {
   align-items: center;
 }
 
+@media (max-width: 1680px) {
+  .h7 {
+    display: none;
+  }
+  .h8 {
+    display: none;
+  }
+}
 @media (max-width: 1440px) {
   .discover {
     flex-direction: column;
@@ -152,12 +161,32 @@ h1 {
   .holder-b .t-14 {
     font-size: 10px;
   }
+  .h7 {
+    display: flex;
+  }
+  .h8 {
+    display: flex;
+  }
+}
+@media (max-width: 1200px) {
+  .h7 {
+    display: none;
+  }
+  .h8 {
+    display: none;
+  }
 }
 @media (max-width: 1080px) {
   .discover {
     margin-top: 160px;
   }
   .st {
+    display: none;
+  }
+  .h6 {
+    display: none;
+  }
+  .h5 {
     display: none;
   }
 }
@@ -190,16 +219,16 @@ h1 {
     padding: 8px;
   }
   .h-l {
-    /* ??? */
+    gap: 4px;
+  }
+  .h-l .t-14 {
     display: none;
-    /* ??? */
-    gap: 8px;
   }
   .holder .t-20 {
     font-size: 12px;
   }
   .holder-img {
-    width: 90px;
+    width: 120px;
   }
   .holder-b {
     flex-direction: column;
@@ -207,6 +236,14 @@ h1 {
   }
   .holder-b .b-btn {
     height: 32px;
+  }
+}
+@media (max-width: 420px) {
+  .h4 {
+    display: none;
+  }
+  .h3 {
+    display: none;
   }
 }
 @media (max-width: 360px) {
