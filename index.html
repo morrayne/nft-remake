@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/stylecomments.css" />
     <link rel="stylesheet" href="./css/btnandtext.css" />
     <link rel="stylesheet" href="./css/headerfooter.css" />
     <link rel="stylesheet" href="./css/discoverexplore.css" />
@@ -23,7 +23,7 @@
             <button class="header-logo profile pr1">
               <img src="./res/img/j.png" / style="border-radius: 4px;">
             </button>
-            <button class="b-btn t pr1">connect wallet</button>
+            <button class="b-btn t pr1">change options</button>
             <div class="header-nav">
               <button class="t-24 t">discover</button>
               <button class="t-24 t">explore</button>
@@ -35,7 +35,7 @@
             <button class="header-logo pr2" class="profile">
               <img src="./res/img/j.png" / style="border-radius: 4px;">
             </button>
-            <button class="b-btn t pr2">connect wallet</button>
+            <button class="b-btn t pr2">change options</button>
           </div>
         </div>
 
@@ -56,8 +56,8 @@
               With Over Thousands Of NFTs And Get a $20 bonus.
             </span>
             <div class="d-btnc">
-              <button class="b-btn t">connect wallet</button>
-              <button class="w-btn t">connect wallet</button>
+              <button class="b-btn t" id="knowMore">more about NFTs</button>
+              <button class="w-btn t" id="seeOther">go to traidings</button>
             </div>
             <div class="d-btnc" style="justify-content: space-between">
               <div class="d-stat">
@@ -100,6 +100,14 @@
                 stroke-linejoin="round">
             </path>
             </svg>
+            <div class="more-info">
+              <span class="t w-20">
+                Blue Stones
+              </span>
+              <span class="t w-14">
+                Simple blue and yellow overlaping stones
+              </span>
+            </div>
             <div class="d-img-c">
               <img src="./res/img/icons/BlueStones.png" class="d-img" />
               <img src="./res/img/icons/GreenBubbles.png" class="d-img" />
@@ -162,7 +170,7 @@
                   d="M17.9933 2.56158H7.20502C5.58888 2.56158 4.2666 3.87337 4.2666 5.49999V20.6014C4.2666 22.228 5.58888 23.5503 7.20502 23.5503H17.9933C19.6199 23.5503 20.9317 22.228 20.9317 20.6014V5.49999C20.9317 3.87337 19.6199 2.56158 17.9933 2.56158ZM8.28597 17.705H16.9123C17.3531 17.705 17.6994 18.0618 17.6994 18.4921C17.6994 18.9223 17.3531 19.2791 16.9123 19.2791H8.28597C7.8557 19.2791 7.49889 18.9223 7.49889 18.4921C7.49889 18.0618 7.8557 17.705 8.28597 17.705ZM7.49889 13.0979C7.49889 12.6677 7.8557 12.3109 8.28597 12.3109H16.9123C17.3531 12.3109 17.6994 12.6677 17.6994 13.0979C17.6994 13.5387 17.3531 13.885 16.9123 13.885H8.28597C7.8557 13.885 7.49889 13.5387 7.49889 13.0979ZM16.9123 8.4909H8.28597C7.8557 8.4909 7.49889 8.14459 7.49889 7.70382C7.49889 7.27355 7.8557 6.91674 8.28597 6.91674H16.9123C17.3531 6.91674 17.6994 7.27355 17.6994 7.70382C17.6994 8.14459 17.3531 8.4909 16.9123 8.4909Z"
                   fill="black"></path>
               </svg>
-              pictures
+              picture simplisity
             </button>
           </div>
 
@@ -308,14 +316,28 @@
             <div class="follow-list">
               <span class="t-24 t"> Best sellers </span>
               <div class="follow-line">
-                <img src="./res/img/icons/BlueStones.png" class="follow-img" />
+                <img src="./res/img/herta.jpg" class="follow-img" />
                 <div class="follow-div">
                   <span class="t-18 t"> The Herta </span>
-                  <span class="t-16 t"> 120 </span>
+                  <span class="t-16 t"> 1 200 </span>
                 </div>
                 <button class="follow-btn t">follow</button>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="pre-footer">
+          <div class="pre-l">
+            <span class="w-36 t"> Create and sell NFTs </span>
+            <span class="w-24 t"> World’s largest NFT marketplace </span>
+            <div class="pre-div">
+              <button class="w-btn t">Explore more</button>
+              <button class="b-btn-o t">Sell artwork</button>
+            </div>
+          </div>
+          <div class="pre-r">
+            <img src="./res/img/create.png"/ style="height: 100%; min-width:270px;">
           </div>
         </div>
 
@@ -336,18 +358,18 @@
                 <td class="td1">
                   <img src="./res/img/icons/BlueStones.png" class="td-img" />
                   <div class="td-div">
-                    <span class="t-20 t"> Alex Ca </span>
-                    <span class="t-14 t"> by Alex </span>
+                    <span class="t-20 t"> Blue Stones </span>
+                    <span class="t-14 t"> by redmorrayne </span>
                   </div>
                 </td>
                 <td class="td2">
                   <div class="tt-div">
                     <img src="./res/svg/gem.svg" class="tt-svg" />
-                    <span class="t-20 t"> 200 </span>
+                    <span class="t-20 t"> 240 </span>
                   </div>
                 </td>
                 <td class="td3">
-                  <span class="t-20 t"> -12.5% </span>
+                  <span class="t-20 t"> 6.55% </span>
                 </td>
                 <td class="td4">
                   <div class="tt-div">
@@ -366,78 +388,78 @@
                 <td class="td1">
                   <img src="./res/img/icons/GreenBubbles.png" class="td-img" />
                   <div class="td-div">
-                    <span class="t-20 t"> Felix White </span>
-                    <span class="t-14 t"> by Felix </span>
+                    <span class="t-20 t"> Green Bubbles </span>
+                    <span class="t-14 t"> by whyxies </span>
                   </div>
                 </td>
                 <td class="td2">
                   <div class="tt-div">
                     <img src="./res/svg/gem.svg" class="tt-svg" />
-                    <span class="t-20 t"> 310 </span>
+                    <span class="t-20 t"> 220 </span>
                   </div>
                 </td>
                 <td class="td3">
-                  <span class="t-20 t"> 22.5% </span>
+                  <span class="t-20 t"> 8.15% </span>
                 </td>
                 <td class="td4">
                   <div class="tt-div">
                     <img src="./res/svg/gem.svg" class="tt-svg" />
-                    <span class="t-20 t"> 200 </span>
+                    <span class="t-20 t"> 205 </span>
                   </div>
                 </td>
                 <td class="td5">
-                  <span class="t-20 t"> 800 </span>
+                  <span class="t-20 t"> 860 </span>
                 </td>
                 <td class="td6">
-                  <span class="t-20 t"> 140 </span>
+                  <span class="t-20 t"> 165 </span>
                 </td>
               </tr>
               <tr class="tr1">
                 <td class="td1">
                   <img src="./res/img/icons/RedWaves.png" class="td-img" />
                   <div class="td-div">
-                    <span class="t-20 t"> Olivia Simons </span>
-                    <span class="t-14 t"> by Olivia </span>
+                    <span class="t-20 t"> Red Waves </span>
+                    <span class="t-14 t"> by jacio1 </span>
                   </div>
                 </td>
                 <td class="td2">
                   <div class="tt-div">
                     <img src="./res/svg/gem.svg" class="tt-svg" />
-                    <span class="t-20 t"> 650 </span>
+                    <span class="t-20 t"> 205 </span>
                   </div>
                 </td>
                 <td class="td3">
-                  <span class="t-20 t"> 7.2% </span>
+                  <span class="t-20 t"> -7.65% </span>
                 </td>
                 <td class="td4">
                   <div class="tt-div">
                     <img src="./res/svg/gem.svg" class="tt-svg" />
-                    <span class="t-20 t"> 350 </span>
+                    <span class="t-20 t"> 180 </span>
                   </div>
                 </td>
                 <td class="td5">
-                  <span class="t-20 t"> 2 100 </span>
+                  <span class="t-20 t"> 2 210 </span>
                 </td>
                 <td class="td6">
-                  <span class="t-20 t"> 80 </span>
+                  <span class="t-20 t"> 175 </span>
                 </td>
               </tr>
               <tr class="tr1">
                 <td class="td1">
                   <img src="./res/img/icons/WhiteField.png" class="td-img" />
                   <div class="td-div">
-                    <span class="t-20 t"> Anonim </span>
-                    <span class="t-14 t"> by Anonim </span>
+                    <span class="t-20 t"> White Field </span>
+                    <span class="t-14 t"> by Fantazer </span>
                   </div>
                 </td>
                 <td class="td2">
                   <div class="tt-div">
                     <img src="./res/svg/gem.svg" class="tt-svg" />
-                    <span class="t-20 t"> 350 </span>
+                    <span class="t-20 t"> 225 </span>
                   </div>
                 </td>
                 <td class="td3">
-                  <span class="t-20 t"> -2.5% </span>
+                  <span class="t-20 t"> 2.85% </span>
                 </td>
                 <td class="td4">
                   <div class="tt-div">
@@ -446,27 +468,64 @@
                   </div>
                 </td>
                 <td class="td5">
-                  <span class="t-20 t"> 2 500 </span>
+                  <span class="t-20 t"> 1 740 </span>
                 </td>
                 <td class="td6">
-                  <span class="t-20 t"> 95 </span>
+                  <span class="t-20 t"> 210 </span>
+                </td>
+              </tr>
+              <tr class="tr1">
+                <td class="td1">
+                  <img src="./res/img/icons/YellowSpot.png" class="td-img" />
+                  <div class="td-div">
+                    <span class="t-20 t"> Yellow Spot </span>
+                    <span class="t-14 t"> by Miph </span>
+                  </div>
+                </td>
+                <td class="td2">
+                  <div class="tt-div">
+                    <img src="./res/svg/gem.svg" class="tt-svg" />
+                    <span class="t-20 t"> 235 </span>
+                  </div>
+                </td>
+                <td class="td3">
+                  <span class="t-20 t"> -1.05% </span>
+                </td>
+                <td class="td4">
+                  <div class="tt-div">
+                    <img src="./res/svg/gem.svg" class="tt-svg" />
+                    <span class="t-20 t"> 225 </span>
+                  </div>
+                </td>
+                <td class="td5">
+                  <span class="t-20 t"> 1 410 </span>
+                </td>
+                <td class="td6">
+                  <span class="t-20 t"> 140 </span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="pre-footer">
-          <div class="pre-l">
-            <span class="w-36 t"> Create and sell NFTs </span>
-            <span class="w-24 t"> World’s largest NFT marketplace </span>
-            <div class="pre-div">
-              <button class="w-btn t">Explore more</button>
-              <button class="b-btn-o t">Sell artwork</button>
-            </div>
+        <div class="comments">
+          <span class="t-24 t">
+            You can leave your comments here
+          </span>
+          <div class="com-line" style="flex-wrap: wrap;">
+            <input type="text" class="inputs" placeholder="enter your name">
+            <input type="text" class="inputs" placeholder="what do you think?">
           </div>
-          <div class="pre-r">
-            <img src="./res/img/create.png"/ style="height: 100%; min-width:270px;">
+          <div class="com-line">
+            <img src="./res/img/herta.jpg" class="com-img">
+            <div class="com-div">
+              <span class="t-20">
+                The Herta
+              </span>
+              <span class="t-16">
+                This redmorrayne guy can surely create web sites
+              </span>
+            </div>
           </div>
         </div>
       </div>
