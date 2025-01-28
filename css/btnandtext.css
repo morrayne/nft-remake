@@ -41,7 +41,7 @@
   outline: solid 2px #fff;
 }
 .b-btn-o:focus {
-  outline: solid 2px #000;
+  outline: solid 2px #fff;
 }
 .w-btn-o {
   width: fit-content;

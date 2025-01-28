@@ -1,0 +1,30 @@
+.error-container {
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    pointer-events: none;
+}
+.error-log {
+    max-width: 1920px;
+    width: 100%;
+    height: fit-content;
+    max-height: 480px;
+    overflow-y: hidden;
+    flex-direction: column-reverse;
+    gap: 12px;
+    padding-left: 20px;
+}
+.err {
+    width: fit-content;
+    max-width: 320px;
+    height: fit-content;
+    border-radius: 8px;
+    background-color: #000;
+    padding: 8px;
+    pointer-events: auto;
+    opacity: 0;
+    transition: 0.2s;
+}

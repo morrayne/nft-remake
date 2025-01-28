@@ -18,12 +18,13 @@ filterBtns.addEventListener("click", function (event) {
   document.querySelector(".colorShow").parentElement.children[1].style.rotate = "90deg";
   document.querySelector(".colorShow").parentElement.children[2].style.backgroundColor = "#000";
   if (targetButton === filterBtns.children[0]) {
-    // Обработка первой кнопки
   } else if (targetButton === filterBtns.children[1]) {
     updateDOM(sortByPrice(sortPriceCounter));
     sortPriceCounter = sortPriceCounter * -1;
   } else if (targetButton === filterBtns.children[2]) {
     updateDOM(sortByColor());
+  } else if (targetButton === filterBtns.children[3]) {
+    createError("This type of filtration is not ready yet");
   }
 });
 
