@@ -24,7 +24,9 @@
   gap: 12px;
   white-space: nowrap;
 }
-
+.w-btn:focus {
+  outline: solid 2px #000;
+}
 .b-btn-o {
   width: fit-content;
   height: 60px;
@@ -37,6 +39,9 @@
   align-items: center;
   gap: 12px;
   outline: solid 2px #fff;
+}
+.b-btn-o:focus {
+  outline: solid 2px #000;
 }
 .w-btn-o {
   width: fit-content;

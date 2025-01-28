@@ -46,7 +46,7 @@ function getRandomNumber(min, max) {
 }
 const list = document.querySelector(".follow-list");
 const ina = document.querySelector(".explore-holder");
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 10; i++) {
   const input = createHolder();
   input.classList.add("h" + i);
   ina.appendChild(input);
@@ -55,7 +55,14 @@ function createHolder() {
   const holder = document.createElement("div");
   holder.classList.add("holder");
   const img = document.createElement("img");
-  img.setAttribute("src", imgScr[Math.floor(Math.random() * imgScr.length)]);
+  let randomSrc = Math.floor(Math.random() * imgScr.length);
+  let randomColor = "";
+  for (let i = 0; i < imgScr.length; i++) {
+    if (randomSrc == i) {
+      randomColor = "color" + i;
+    }
+  }
+  img.setAttribute("src", imgScr[randomSrc]);
   img.classList.add("holder-img");
   const h3 = document.createElement("span");
   h3.classList.add("t-20");
@@ -91,6 +98,7 @@ function createHolder() {
   holder.appendChild(img);
   holder.appendChild(h3);
   holder.appendChild(holderb);
+  holder.classList.add(randomColor);
 
   return holder;
 }

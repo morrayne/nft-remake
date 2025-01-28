@@ -105,6 +105,29 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+#pricePointer {
+  width: 18px;
+  height: 18px;
+  rotate: 180deg;
+  opacity: 0.6;
+  filter: brightness(0);
+  transition: 0.4s;
+}
+#colorPointer {
+  width: 18px;
+  height: 18px;
+  rotate: 90deg;
+  opacity: 0.6;
+  filter: brightness(0);
+  transition: 0.4s;
+}
+.colorShow {
+  min-width: 14px;
+  min-height: 14px;
+  border-radius: 50%;
+  background-color: #000000;
+  transition: 0.2s;
+}
 .explore-filter {
   margin-top: 30px;
   gap: 24px;
@@ -207,6 +230,9 @@ h1 {
   .h5 {
     display: none;
   }
+  .explore-filter {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 860px) {
   .discover {
@@ -224,9 +250,7 @@ h1 {
   .explore-holder {
     justify-content: space-around;
   }
-  .explore-filter {
-    flex-wrap: wrap;
-  }
+  
   .d-img-c {
     width: 240px;
   }
