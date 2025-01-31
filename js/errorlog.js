@@ -23,15 +23,15 @@ document.querySelector(".explore-holder").addEventListener("click", function (ev
     }
 });
 
-document.querySelector(".header").addEventListener("click", function(event) {
-    const targetButton0 = event.target.closest(".opt");
-    const targetButton1 = event.target.closest(".prof");
-    if (targetButton0) {
-        createError("Options are currently in development");
-    } else if (targetButton1) {
-        createError("This function is not ready yet (Profile)");
-    }
-})
+// document.querySelector(".header").addEventListener("click", function(event) {
+//     const targetButton0 = event.target.closest(".opt");
+//     const targetButton1 = event.target.closest(".prof");
+//     if (targetButton0) {
+//         createError("Options are currently in development");
+//     } else if (targetButton1) {
+//         createError("This function is not ready yet (Profile)");
+//     }
+// })
 document.querySelector(".pre-div").addEventListener("click", function(event) {
     const targetButton = event.target.closest("button");
     if (targetButton) {

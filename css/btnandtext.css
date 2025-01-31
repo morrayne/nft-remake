@@ -132,6 +132,16 @@
   font-size: 20px;
   color: #fff;
 }
+.w-18 {
+  height: fit-content;
+  font-size: 18px;
+  color: #fff;
+}
+.w-16 {
+  height: fit-content;
+  font-size: 16px;
+  color: #fff;
+}
 .w-14 {
   height: fit-content;
   font-size: 14px;
