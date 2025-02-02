@@ -1,5 +1,20 @@
-let arr1 = [];
-let arr2 = [];
+// ВКЛЮЧЕНИЕ ЭКРАНА НАСТРОЕК
+
+document.querySelector(".header-r").addEventListener("click", function (event) {
+  if (event.target.closest("button")) {
+    document.querySelector(".opt-div").style.display = "flex";
+    getSize();
+    setTimeout(() => {
+      switcher(0, parseInt(localStorage.getItem("theme")));
+      switcher(1, parseInt(localStorage.getItem("lang")));
+    }, 10);
+    setTimeout(() => {
+      document.querySelector(".opt-div").style.opacity = "1";
+    }, 200);
+  }
+});
+
+// ВЫКЛЮЧЕНИЕ ЭКРАНА НАСТРОЕК
 
 document.querySelector(".opt-div").addEventListener("click", function (event) {
   let err = document.querySelector(".opt-div");
@@ -8,28 +23,20 @@ document.querySelector(".opt-div").addEventListener("click", function (event) {
     setTimeout(() => {
       err.style.display = "none";
     }, 200);
-  } 
-  else if (!event.target.closest(".opt-card")) {
+    createError("New options saved");
+  } else if (!event.target.closest(".opt-card")) {
     err.style.opacity = "0";
     setTimeout(() => {
       err.style.display = "none";
     }, 200);
+    createError("New options saved");
   }
 });
 
+// ПОЛУЧЕНИЕ РАЗМЕРОВ БЕГУНКА
 
-document.querySelector(".header-r").addEventListener("click", function (event) {
-  if (event.target.closest("button")) {
-    document.querySelector(".opt-div").style.display = "flex";
-    getSize();
-    reSize(0, 0);
-    reSize(1, 0);
-    setTimeout(() => {
-      document.querySelector(".opt-div").style.opacity = "1";
-    }, 200);
-  }
-});
-
+let arr1 = [];
+let arr2 = [];
 function getSize() {
   document.querySelectorAll(".switch-div").forEach(function (el, index) {
     let arr = [];
@@ -42,55 +49,63 @@ function getSize() {
       arr2 = arr;
     }
   });
-  console.log(arr1, arr2);
 }
 
-function reSize(optionDiv, position) {
-  let el = document.querySelectorAll(".switch-div")[optionDiv];
+// ОПЦИИ ПОВЕДЕНИЯ БЕГУНКА И НАСТРОЕК
+
+function switcher(row, option) {
+  let el = document.querySelectorAll(".switch-div")[row];
   let arr;
-  if (optionDiv === 0) {
+  if (row === 0) {
     arr = arr1;
-  } else {
+  } else if (row === 1) {
     arr = arr2;
   }
-
-  if (position == 0) {
+  // ИЗМЕНЕНИЕ ЦВЕТА ТЕКСТА И РАЗМЕРОВ И ПОЛОЖЕНИЯ БЕГУНКА
+  if (option === 0) {
     el.children[0].style.width = arr[0] + 16 + "px";
-    el.children[0].style.marginLeft = "0px";
-
+    el.children[0].style.marginLeft = 0 + "px";
     el.children[1].style.filter = "invert(0)";
     el.children[2].style.filter = "invert(0)";
   } else {
     el.children[0].style.width = arr[1] + 16 + "px";
     el.children[0].style.marginLeft = arr[0] + 24 + "px";
-
     el.children[1].style.filter = "invert(1)";
     el.children[2].style.filter = "invert(1)";
   }
+}
 
-  if (optionDiv == 0 && position == 0) {
-    document.body.style.setProperty("--bl", "#fff");
-    document.body.style.setProperty("--wh", "#000");
-    document.body.style.setProperty("--bl20", "#ffffff10");
-    document.body.style.setProperty("--bl90", "#ffffff90");
-    document.body.style.setProperty("--gr", "#ffffff");
-    document.body.style.setProperty("--gr50", "#ffffff90");
-    document.querySelectorAll(".sv").forEach(function(el) {
-      el.style.filter = "invert(1)";
-      // el.style.filter = "brightnes(10)";
-    })
-  } else if (optionDiv == 0 && position == 1) {
+// ФАКТИЧЕСКОЕ ВЛИЯНИЕ НАСТРОЕК НА САЙТ
+
+function reSize(row, option) {
+  if (row == 0 && option == 0) {
     document.body.style.setProperty("--bl", "#000");
     document.body.style.setProperty("--wh", "#fff");
     document.body.style.setProperty("--bl20", "#00000020");
     document.body.style.setProperty("--bl90", "#00000090");
     document.body.style.setProperty("--gr", "#cbcbcb");
     document.body.style.setProperty("--gr50", "#cbcbcb50");
-    document.querySelectorAll(".sv").forEach(function(el) {
+    document.querySelectorAll(".sv").forEach(function (el) {
       el.style.filter = "";
-    })
+    });
+  } else if (row == 0 && option == 1) {
+    document.body.style.setProperty("--bl", "#fff");
+    document.body.style.setProperty("--wh", "#000");
+    document.body.style.setProperty("--bl20", "#ffffff10");
+    document.body.style.setProperty("--bl90", "#ffffff90");
+    document.body.style.setProperty("--gr", "#ffffff");
+    document.body.style.setProperty("--gr50", "#ffffff90");
+    document.querySelectorAll(".sv").forEach(function (el) {
+      el.style.filter = "invert(1)";
+    });
+  } else if (row == 1 && option == 0) {
+  } else if (row == 1 && option == 1) {
   }
+  saveOptions(row, option);
+  switcher(row, option);
 }
+
+// ДОБАВЛЕНИЕ ВОЗМОЖНОСТИ ПЕРЕКЛЮЧЕНИЯ НАСТРОЕК
 
 document.querySelectorAll(".switch-div").forEach(function (el, index) {
   el.addEventListener("click", function (event) {
@@ -102,3 +117,20 @@ document.querySelectorAll(".switch-div").forEach(function (el, index) {
     }
   });
 });
+
+// СОХРАНЕНИЕ И ЗАГРУЗКА НАСТРОЕК ПОЛЬЗОВАТЕЛЯ
+
+function saveOptions(row, position) {
+  if (row === 0) {
+    localStorage.setItem("theme", position);
+  } else {
+    localStorage.setItem("lang", position);
+  }
+}
+function loadOptions() {
+  createError("Your options were loaded");
+  localStorage.getItem("lang");
+  reSize(0, localStorage.getItem("theme"));
+  reSize(1, localStorage.getItem("lang"));
+}
+loadOptions();
