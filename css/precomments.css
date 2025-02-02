@@ -2,7 +2,7 @@
 
 .pre-footer {
   width: 100%;
-  background-color: #000;
+  background-color: var(--bl);
   padding: 24px;
   border-radius: 12px;
   margin-top: 80px;
@@ -17,14 +17,14 @@
 }
 .h2-bl {
   font-size: 32px;
-  color: #fff;
+  color: var(--wh);
 }
 .h3-bl {
   font-size: 24px;
-  color: #cbcbcb;
+  color: var(--gr);
 }
 .w-text {
-  color: #fff;
+  color: var(--wh);
   font-size: 24px;
   align-items: center;
 }

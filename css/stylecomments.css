@@ -6,6 +6,14 @@
   font-family: "psans";
   src: url("../res/fonts/PublicSans.ttf") format("truetype");
 }
+body {
+  --bl: #000;
+  --wh: #fff;
+  --bl20: #00000020;
+  --bl90: #00000090;
+  --gr: #cbcbcb;
+  --gr50: #cbcbcb50;
+}
 div,
 span {
   display: flex;
@@ -16,6 +24,7 @@ span {
 body {
   display: flex;
   justify-content: center;
+  background: var(--wh);
 }
 .container {
   max-width: 1920px;
@@ -45,7 +54,7 @@ body {
   width: 100%;
   margin-top: 80px;
   padding: 16px;
-  outline: solid 2px #cbcbcb;
+  outline: solid 2px var(--gr);
   border-radius: 16px;
   flex-direction: column;
   gap: 16px;
@@ -58,14 +67,15 @@ body {
 .inputs {
   width: 48%;
   height: 64px;
-  background-color: #cbcbcb50;
+  background-color: var(--gr50);
   border-radius: 8px;
   padding: 0px 12px;
-  color: #000;
+  color: var(--bl);
   font-size: 18px;
 }
 .inputs::placeholder {
-  color: #00000090;
+  color: var(--bl90);
+  /* opacity: 0.9; */
 }
 .com-img {
   height: 64px;

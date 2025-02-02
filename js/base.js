@@ -80,6 +80,7 @@ function createHolder() {
   gemdiv.classList.add("gem");
   const gemsvg = document.createElement("img");
   gemsvg.setAttribute("src", "./res/svg/gem.svg");
+  gemsvg.classList.add("sv");
   const num = document.createElement("span");
   num.textContent = getRandomNumber(10, 99) + "0";
   num.classList.add("t");

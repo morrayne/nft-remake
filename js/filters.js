@@ -13,10 +13,10 @@ filterBtns.addEventListener("click", function (event) {
   updateDOM(startArr);
   document.getElementById("pricePointer").style.opacity = "0.5";
   document.getElementById("pricePointer").style.rotate = "180deg";
-  document.querySelector(".colorShow").parentElement.children[0].style.backgroundColor = "#000";
+  document.querySelector(".colorShow").parentElement.children[0].style.backgroundColor = "";
   document.querySelector(".colorShow").parentElement.children[1].style.opacity = "0.5";
   document.querySelector(".colorShow").parentElement.children[1].style.rotate = "90deg";
-  document.querySelector(".colorShow").parentElement.children[2].style.backgroundColor = "#000";
+  document.querySelector(".colorShow").parentElement.children[2].style.backgroundColor = "";
   if (targetButton === filterBtns.children[0]) {
   } else if (targetButton === filterBtns.children[1]) {
     updateDOM(sortByPrice(sortPriceCounter));

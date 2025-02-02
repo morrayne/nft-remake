@@ -3,8 +3,8 @@
   height: 60px;
   font-size: 18px;
   padding: 0px 12px;
-  color: #fff;
-  background-color: #000;
+  color: var(--wh);
+  background-color: var(--bl);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -15,9 +15,9 @@
   height: 60px;
   font-size: 18px;
   padding: 0px 12px;
-  color: #000;
-  background-color: #fff;
-  outline: solid 1px #000;
+  color: var(--bl);
+  background-color: var(--wh);
+  outline: solid 1px var(--bl);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -25,37 +25,37 @@
   white-space: nowrap;
 }
 .w-btn:focus {
-  outline: solid 2px #000;
+  outline: solid 2px var(--bl);
 }
 .b-btn-o {
   width: fit-content;
   height: 60px;
   font-size: 18px;
   padding: 0px 12px;
-  color: #fff;
-  background-color: #000;
+  color: var(--wh);
+  background-color: var(--bl);
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 12px;
-  outline: solid 2px #fff;
+  outline: solid 2px var(--wh);
 }
 .b-btn-o:focus {
-  outline: solid 2px #fff;
+  outline: solid 2px var(--wh);
 }
 .w-btn-o {
   width: fit-content;
   height: 60px;
   font-size: 18px;
   padding: 0px 12px;
-  color: #000;
-  background-color: #fff;
-  outline: solid 1px #000;
+  color: var(--bl);
+  background-color: var(--wh);
+  outline: solid 1px var(--bl);
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 12px;
-  outline: solid 2px #000;
+  outline: solid 2px var(--bl);
 }
 
 /* follow lines */
@@ -63,7 +63,7 @@
 .follow-btn {
   height: 36px;
   padding: 0px 12px;
-  outline: solid 2px #e6e8ec;
+  outline: solid 2px var(--gr50);
   border-radius: 8px;
   margin-left: auto;
   margin-right: 2px;
@@ -71,81 +71,81 @@
   color: #3b3b3b;
 }
 .follow-btn:focus {
-  outline: solid 2px #e6e8ec;
+  outline: solid 2px var(--gr);
 }
 .followed {
-  background-color: #e6e8ec;
+  background-color: var(--gr);
 }
 
 /* texts */
 
 .t-64 {
   font-size: 64px;
-  color: #000;
+  color: var(--bl);
   font-weight: 600;
 }
 .t-48 {
   font-size: 48px;
-  color: #000;
+  color: var(--bl);
   font-weight: 600;
 }
 .t-32 {
   font-size: 32px;
-  color: #000;
+  color: var(--bl);
 }
 .t-24 {
   font-size: 24px;
-  color: #000;
+  color: var(--bl);
 }
 .t-20 {
   font-size: 20px;
-  color: #000;
+  color: var(--bl);
   height: fit-content;
 }
 .t-18 {
   font-size: 18px;
-  color: #000;
+  color: var(--bl);
 }
 .t-16 {
   font-size: 16px;
-  color: #000;
+  color: var(--bl);
 }
 .t-14 {
   font-size: 14px;
-  color: #000;
+  color: var(--bl);
 }
 .w-36 {
   font-size: 36px;
-  color: #fff;
+  color: var(--wh);
 }
 .w-32 {
   font-size: 32px;
-  color: #fff;
+  color: var(--wh);
 }
 .w-24 {
   height: fit-content;
   font-size: 24px;
-  color: #fff;
+  color: var(--wh);
 }
 .w-20 {
   height: fit-content;
   font-size: 20px;
-  color: #fff;
+  color: var(--wh);
 }
 .w-18 {
   height: fit-content;
   font-size: 18px;
-  color: #fff;
+  color: var(--wh);
 }
 .w-16 {
   height: fit-content;
   font-size: 16px;
-  color: #fff;
+  color: var(--wh);
 }
 .w-14 {
   height: fit-content;
   font-size: 14px;
-  color: #fff;
+  color: var(--wh);
 }
 
 @media (max-width: 720px) {

@@ -1,18 +1,29 @@
 let arr1 = [];
 let arr2 = [];
 
-document.getElementById("close").addEventListener("click", function () {
+document.querySelector(".opt-div").addEventListener("click", function (event) {
   let err = document.querySelector(".opt-div");
-  err.style.opacity = "0";
-  setTimeout(() => {
-    err.style.display = "none";
-  }, 200);
+  if (event.target.closest("#close")) {
+    err.style.opacity = "0";
+    setTimeout(() => {
+      err.style.display = "none";
+    }, 200);
+  } 
+  else if (!event.target.closest(".opt-card")) {
+    err.style.opacity = "0";
+    setTimeout(() => {
+      err.style.display = "none";
+    }, 200);
+  }
 });
+
 
 document.querySelector(".header-r").addEventListener("click", function (event) {
   if (event.target.closest("button")) {
     document.querySelector(".opt-div").style.display = "flex";
     getSize();
+    reSize(0, 0);
+    reSize(1, 0);
     setTimeout(() => {
       document.querySelector(".opt-div").style.opacity = "1";
     }, 200);
@@ -55,6 +66,29 @@ function reSize(optionDiv, position) {
 
     el.children[1].style.filter = "invert(1)";
     el.children[2].style.filter = "invert(1)";
+  }
+
+  if (optionDiv == 0 && position == 0) {
+    document.body.style.setProperty("--bl", "#fff");
+    document.body.style.setProperty("--wh", "#000");
+    document.body.style.setProperty("--bl20", "#ffffff10");
+    document.body.style.setProperty("--bl90", "#ffffff90");
+    document.body.style.setProperty("--gr", "#ffffff");
+    document.body.style.setProperty("--gr50", "#ffffff90");
+    document.querySelectorAll(".sv").forEach(function(el) {
+      el.style.filter = "invert(1)";
+      // el.style.filter = "brightnes(10)";
+    })
+  } else if (optionDiv == 0 && position == 1) {
+    document.body.style.setProperty("--bl", "#000");
+    document.body.style.setProperty("--wh", "#fff");
+    document.body.style.setProperty("--bl20", "#00000020");
+    document.body.style.setProperty("--bl90", "#00000090");
+    document.body.style.setProperty("--gr", "#cbcbcb");
+    document.body.style.setProperty("--gr50", "#cbcbcb50");
+    document.querySelectorAll(".sv").forEach(function(el) {
+      el.style.filter = "";
+    })
   }
 }
 

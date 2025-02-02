@@ -40,13 +40,13 @@ h1 {
   height: max-content;
   overflow-x: hidden;
   border-radius: 8px;
-  box-shadow: 0 5px 5px #00000020, -5px -5px 5px #00000020;
+  box-shadow: 0 5px 5px var(--bl20), -5px -5px 5px var(--bl20);
   position: relative;
 }
 .more-info {
   width: 80%;
   height: fit-content;
-  background-color: #000000;
+  background-color: var(--bl);
   z-index: 3;
   position: absolute;
   right: 10px;
@@ -71,7 +71,7 @@ h1 {
   margin: 0px auto;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0 5px 5px #00000020, -5px -5px 5px #00000020;
+  box-shadow: 0 5px 5px var(--bl20), -5px -5px 5px var(--bl20);
 }
 .point-c {
   width: 64px;
@@ -125,7 +125,7 @@ h1 {
   min-width: 14px;
   min-height: 14px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: var(--bl);
   transition: 0.2s;
 }
 .explore-filter {
@@ -142,7 +142,7 @@ h1 {
 }
 .holder {
   padding: 12px;
-  box-shadow: 0 5px 5px #00000020, -5px -5px 5px #00000020;
+  box-shadow: 0 5px 5px var(--bl20), -5px -5px 5px var(--bl20);
   border-radius: 16px;
   flex-direction: column;
   gap: 8px;

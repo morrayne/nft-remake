@@ -21,6 +21,11 @@
   align-items: center;
   position: relative;
 }
+.header-r .b-btn {
+  background: #000;
+  color: #fff;
+}
+
 .header-logo {
   min-width: 60px;
   min-height: 60px;
@@ -29,6 +34,9 @@
 }
 .header-nav {
   gap: 24px;
+}
+.header-nav .t {
+  color: #000;
 }
 .header-nav-text {
   font-size: 24px;
@@ -52,7 +60,7 @@ footer {
   width: 100%;
   height: fit-content;
   margin-top: 80px;
-  background-color: #000;
+  background-color: var(--bl);
   padding: 24px 80px;
   display: flex;
   flex-direction: column;
@@ -70,7 +78,7 @@ footer {
   padding: 8px;
 }
 .g-text {
-  color: #cbcbcb;
+  color: var(--gr);
   font-size: 24px;
   align-items: center;
   white-space: nowrap;
