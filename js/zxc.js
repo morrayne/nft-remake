@@ -71,7 +71,7 @@ function switcher(row, option) {
     el.children[0].style.width = arr[1] + 16 + "px";
     el.children[0].style.marginLeft = arr[0] + 24 + "px";
     el.children[1].style.filter = "invert(1)";
-    el.children[2].style.filter = "invert(1)";
+    el.children[2].style.filter = "invert(1)"; 
   }
 }
 
@@ -85,9 +85,16 @@ function reSize(row, option) {
     document.body.style.setProperty("--bl90", "#00000090");
     document.body.style.setProperty("--gr", "#cbcbcb");
     document.body.style.setProperty("--gr50", "#cbcbcb50");
-    document.querySelectorAll(".sv").forEach(function (el) {
+    document.body.style.setProperty("--base", "#fff");
+    document.body.style.setProperty("--grbtn", "#3b3b3b");
+
+    document.querySelectorAll(".inv").forEach(function (el) {
       el.style.filter = "";
     });
+    document.querySelectorAll(".brig").forEach(function (el) {
+      el.style.filter = "";
+    });
+    document.getElementById("f-img").style.filter = "";
   } else if (row == 0 && option == 1) {
     document.body.style.setProperty("--bl", "#fff");
     document.body.style.setProperty("--wh", "#000");
@@ -95,9 +102,16 @@ function reSize(row, option) {
     document.body.style.setProperty("--bl90", "#ffffff90");
     document.body.style.setProperty("--gr", "#ffffff");
     document.body.style.setProperty("--gr50", "#ffffff90");
-    document.querySelectorAll(".sv").forEach(function (el) {
+    document.body.style.setProperty("--base", "#080808");
+    document.body.style.setProperty("--grbtn", "#787878");
+
+    document.querySelectorAll(".inv").forEach(function (el) {
       el.style.filter = "invert(1)";
     });
+    document.querySelectorAll(".brig").forEach(function (el) {
+      el.style.filter = "brightness(100)";
+    });
+    document.getElementById("f-img").style.filter = "brightness(0)";
   } else if (row == 1 && option == 0) {
   } else if (row == 1 && option == 1) {
   }
@@ -128,7 +142,7 @@ function saveOptions(row, position) {
   }
 }
 function loadOptions() {
-  createError("Your options were loaded");
+  createNotification("Your options were loaded");
   localStorage.getItem("lang");
   reSize(0, localStorage.getItem("theme"));
   reSize(1, localStorage.getItem("lang"));

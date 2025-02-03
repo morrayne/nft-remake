@@ -32,7 +32,7 @@ document
     }
     const elementPosition =
       targetElement.getBoundingClientRect().top + window.scrollY;
-    const offsetPosition = elementPosition - 100;
+    const offsetPosition = elementPosition - 120;
     window.scrollTo({ top: offsetPosition, behavior: "smooth" });
   });
 
@@ -53,7 +53,7 @@ document.querySelectorAll(".footer-t-links").forEach((el) => {
     if (targetElement) {
       const elementPosition =
         targetElement.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - 100;
+      const offsetPosition = elementPosition - 120;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   });
