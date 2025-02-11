@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "garet";
+  src: url("../res/fonts/Garet.ttf") format("truetype");
+}
+@font-face {
+  font-family: "psans";
+  src: url("../res/fonts/PublicSans.ttf") format("truetype");
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  --bl: #000;
+  --bl20: #00000020;
+  --wh: #fff;
+  --wh20: #ffffff20;
+  --gr: #cbcbcb;
+  --gr20: #cbcbcb80;
+  --mar: 80px;
+}
+div, span, button, section {
+  display: flex;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--base);
+}
+.container {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  height: fit-content;
+  flex-direction: column;
+}
+.c {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px var(--mar);
+  gap: 80px;
+}
+section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BUTTONS */
+
+.b-btn {
+  width: fit-content;
+  height: 48px;
+  padding: 0px 12px;
+  background-color: var(--bl);
+  border-radius: 8px;
+  align-items: center;
+}
+.w-btn {
+  width: fit-content;
+  height: 48px;
+  padding: 0px 12px;
+  background-color: var(--wh);
+  border-radius: 8px;
+  align-items: center;
+}
+.b-btn-o {
+  width: fit-content;
+  height: 48px;
+  padding: 0px 12px;
+  background-color: var(--wh);
+  outline: solid 1px var(--bl);
+  border-radius: 8px;
+  align-items: center;
+}
+.w-btn-o {
+  width: fit-content;
+  height: 48px;
+  padding: 0px 12px;
+  background-color: var(--bl);
+  outline: solid 1px var(--wh);
+  border-radius: 8px;
+  align-items: center;
+}
+
+/* TEXTS */
+
+.w {
+  color: var(--wh);
+}
+.b {
+  color: var(--bl);
+}
+.t {
+  width: fit-content;
+  height: fit-content;
+  font-family: "garet";
+  z-index: 1;
+}
+.t-64 {
+  font-size: 64px;
+}
+.t-56 {
+  font-size: 56px;
+}
+.t-52 {
+  font-size: 52px;
+}
+.t-48 {
+  font-size: 48px;
+}
+.t-42 {
+  font-size: 42px;
+}
+.t-36 {
+  font-size: 36px;
+}
+.t-32 {
+  font-size: 32px;
+}
+.t-27 {
+  font-size: 27px;
+}
+.t-24 {
+  font-size: 24px;
+}
+.t-20 {
+  font-size: 20px;
+}
+.t-18 {
+  font-size: 18px;
+}
+.t-16 {
+  font-size: 16px;
+}
+.t-14 {
+  font-size: 14px;
+}
+.t-12 {
+  font-size: 12px;
+}
+.t-11 {
+  font-size: 10px;
+}
