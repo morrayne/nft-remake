@@ -338,6 +338,9 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 5;
+  transition: 0.2s;
+  display: none;
+  opacity: 0;
 }
 .options-c {
   width: 360px;
@@ -382,4 +385,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.options-hidden {
+  display: none;
 }
