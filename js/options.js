@@ -109,9 +109,10 @@ function changeByName(inputName) {
 
 // переключение всех свичеров в первое положение
 
-document.querySelectorAll(".switch-holder").forEach(function (switcher) {
-  // console.log(switcher);
-  switcherChange(switcher, 0);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".switch-holder").forEach(function (switcher) {
+    switcherChange(switcher, 0);
+  });
 });
 
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
