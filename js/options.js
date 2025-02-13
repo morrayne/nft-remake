@@ -40,9 +40,10 @@ function switcherChange(switcher, position) {
   for (i = 1; i < switcher.children.length; i++) {
     arr.push(switcher.children[i].clientWidth);
   }
+  console.log(arr);
   let runner = switcher.children[0];
   runner.style.width = arr[position] + 8 + "px";
-  runner.style.height = switcher.clientHeight - 8 + "px";
+  // runner.style.height = switcher.clientHeight - 8 + "px";
   let margin = 0;
   if (position === 0) {
     runner.style.marginLeft = margin + "px";
@@ -109,7 +110,7 @@ function changeByName(inputName) {
 // переключение всех свичеров в первое положение
 
 document.querySelectorAll(".switch-holder").forEach(function (switcher) {
-  console.log(switcher);
+  // console.log(switcher);
   switcherChange(switcher, 0);
 });
 

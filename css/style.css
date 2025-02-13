@@ -359,10 +359,12 @@ footer {
   gap: 4px;
 }
 .switch {
+  max-height: 100%;
   position: absolute;
   background-color: blueviolet;
   z-index: 0;
   top: 4px;
+  bottom: 4px;
   left: 4px;
   border-radius: 4px;
   transition: 0.4s;
