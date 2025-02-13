@@ -109,14 +109,11 @@ function changeByName(inputName) {
 
 // переключение всех свичеров в первое положение
 
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    document.querySelectorAll(".switch-holder").forEach(function (switcher) {
-      console.log("Это какая то пытка");
-    });
-  }, 200);
-  switcherChange(switcher, 0);
-});
+setTimeout(() => {
+  document.querySelectorAll(".switch-holder").forEach(function (switcher) {
+    switcherChange(switcher, 0);
+  });
+}, 200);
 
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
 // форматирование имен
