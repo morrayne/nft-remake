@@ -113,7 +113,7 @@ setTimeout(() => {
   document.querySelectorAll(".switch-holder").forEach(function (switcher) {
     switcherChange(switcher, 0);
   });
-}, 6000);
+}, 1000);
 
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
 // форматирование имен
