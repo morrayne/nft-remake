@@ -112,9 +112,10 @@ function changeByName(inputName) {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.querySelectorAll(".switch-holder").forEach(function (switcher) {
-      switcherChange(switcher, 0);
+      console.log("Это какая то пытка");
     });
   }, 200);
+  switcherChange(switcher, 0);
 });
 
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
