@@ -80,7 +80,6 @@ const optionsArrEng = [
   "Theme",
   "Light",
   "Dark",
-  "Another",
   "Notifications alert",
   "On",
   "Off",
@@ -182,7 +181,7 @@ const tableArrRus = [
   "Коллекция",
   "Объём",
   "% за 24ч",
-  "Минималка",
+  "Минимум",
   "Владельцы",
   "Элементы",
   "Blue Stones",
@@ -203,8 +202,7 @@ const optionsArrRus = [
   "Тематика",
   "Светлая",
   "Тёмная",
-  "Другое",
-  "Уведомления о тревоге",
+  "Уведомления",
   "Включено",
   "Выключено",
   "@redmorrayne",
@@ -212,22 +210,22 @@ const optionsArrRus = [
   "",
 ];
 const headerArrRus = [
-  "открыть",
-  "исследовать",
-  "раскрыть",
-  "предварительно",
+  "начать",
+  "рынок",
+  "коллекция",
+  "о NFT",
   "таблица",
-  "комментарии",
+  "отзывы",
   "изменить настройки",
 ];
 const footerArrRus = [
   "© 2025 EATLY Все права защищены.",
-  "открыть",
-  "исследовать",
-  "раскрыть",
-  "предварительно",
+  "начать",
+  "рынок",
+  "коллекция",
+  "о NFT",
   "таблица",
-  "комментарии",
+  "отзывы",
 ];
 const commentsArrRus = [
   "Здесь вы можете оставить своё мнение",
@@ -370,28 +368,44 @@ if (document.fonts) {
 function optionChange(name, position) {
   if (name === "Language") {
     let langArr = [];
+    let headerArr = [];
+    let footerArr = [];
     if (position === 1) {
       langArr = sectionArrRus;
+      headerArr = headerArrRus;
+      footerArr = footerArrRus;
+      document
+        .querySelectorAll(".inputs")[0]
+        .setAttribute("placeholder", commentsArrRus[1]);
+      document
+        .querySelectorAll(".inputs")[1]
+        .setAttribute("placeholder", commentsArrRus[2]);
     } else if (position === 0) {
       langArr = sectionArrEng;
+      headerArr = headerArrEng;
+      footerArr = footerArrEng;
+      document
+        .querySelectorAll(".inputs")[0]
+        .setAttribute("placeholder", commentsArrEng[1]);
+      document
+        .querySelectorAll(".inputs")[1]
+        .setAttribute("placeholder", commentsArrEng[2]);
     }
-    const parent = document.querySelector(".c");
-    for (let i = 0; i < parent.children.length; i++) {
+    for (let i = 0; i < document.querySelector(".c").children.length; i++) {
       let currentArr = langArr[i];
-      if (currentArr) {
-        let section = parent.children[i];
-        let textElements = section.querySelectorAll(".t");
-        for (let j = 0; j < textElements.length; j++) {
-          if (currentArr[j]) {
-            textElements[j].textContent = currentArr[j];
-          }
-        }
+      let section = document.querySelector(".c").children[i];
+      for (let j = 0; j < section.querySelectorAll(".t").length; j++) {
+        section.querySelectorAll(".t")[j].textContent = currentArr[j];
       }
     }
-    // document.getElementById("options").style.opacity = "0";
-    // setTimeout(() => {
-    //   this.style.display = "none";
-    // }, 200);
+    let header = document.querySelector("header");
+    for (let j = 0; j < header.querySelectorAll(".t").length; j++) {
+      header.querySelectorAll(".t")[j].textContent = headerArr[j];
+    }
+    let footer = document.querySelector("footer");
+    for (let j = 0; j < footer.querySelectorAll(".t").length; j++) {
+      footer.querySelectorAll(".t")[j].textContent = footerArr[j];
+    }
   } else if (name === "Theme") {
     if (position === 0) {
       changeTheme("light");
@@ -452,3 +466,5 @@ function removeAdjacentSpaces(input) {
 //
 
 loadOptions();
+// localStorage.setItem("options", "");
+// console.log(localStorage.getItem("options"));

@@ -283,6 +283,7 @@ header {
   gap: 8px;
   justify-content: center;
   align-items: center;
+  margin-right: 8px;
 }
 .gem {
   width: 24px;
@@ -374,12 +375,18 @@ footer {
   opacity: 0;
 }
 .options-c {
-  width: 360px;
-  height: fit-content;
+  width: min-content;
+  height: min-content;
   padding: 12px;
   background-color: var(--wh);
   border-radius: 12px;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
+}
+.options-bot {
+  justify-content: space-between;
+  gap: 12px;
 }
 .options-left {
   flex-direction: column;
@@ -413,14 +420,16 @@ footer {
   transition: 0.2s;
 }
 #optionsLogo {
-  width: 140px;
+  max-width: 140px;
+  min-width: 140px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 .options-right {
   height: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 4px;
   align-items: center;
 }
 .options-hidden {
