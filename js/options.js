@@ -1,3 +1,249 @@
+// английская локализация
+
+const discoverArrEng = [
+  "Discover and",
+  "create NFTs",
+  "Discover, Create and Sell NFTs On Our NFT Marketplace",
+  "With Over Thousands Of NFTs And Get a $20 bonus.",
+  "about NFTs",
+  "to traidings",
+  "Art works",
+  "Creators",
+  "Collections",
+];
+const exploreArrEng = [
+  "Explore marketplace",
+  "refresh filters",
+  "price manage",
+  "image color",
+  "hide similar",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+  "current bid",
+  "place bid",
+];
+const justArrEng = [
+  "Just unleash",
+  "your inner collector",
+  "Best seller all around the world",
+  "$2M+ transections every day",
+  "Secure transactions",
+  "Exclusive collections from sellers",
+  "Easy buying and selling",
+  "Join our community",
+  "explore more",
+  "Best sellers",
+];
+const preArrEng = [
+  "Create and sell NFTs",
+  "World’s largest NFT marketplace",
+  "Leave your opinion about ntf-remake",
+];
+const tableArrEng = [
+  "Collection",
+  "Volume",
+  "% per 24h",
+  "Floor price",
+  "Owners",
+  "Items",
+  "Blue Stones",
+  "by redmorrayne",
+  "Green Bubbles",
+  "by whyxies",
+  "Red Waves",
+  "by jacio1",
+  "White Field",
+  "by Fantazer",
+  "Yellow Spot",
+  "by Miph",
+];
+const optionsArrEng = [
+  "Language",
+  "English",
+  "Russian",
+  "Theme",
+  "Light",
+  "Dark",
+  "Another",
+  "Notifications alert",
+  "On",
+  "Off",
+  "@redmorrayne",
+  "uid: 0",
+  "",
+];
+const headerArrEng = [
+  "discover",
+  "explore",
+  "unleash",
+  "pre",
+  "table",
+  "comments",
+  "change options",
+];
+const footerArrEng = [
+  "© 2025 EATLY All Rights Reserved.",
+  "discover",
+  "explore",
+  "unleash",
+  "pre",
+  "table",
+  "comments",
+];
+const commentsArrEng = [
+  "You can leave your comments here",
+  "enter your name",
+  "what do you think",
+];
+let sectionArrEng = [
+  discoverArrEng,
+  exploreArrEng,
+  justArrEng,
+  preArrEng,
+  tableArrEng,
+  commentsArrEng,
+  optionsArrEng,
+];
+
+// русская локализация
+
+const discoverArrRus = [
+  "Познавайте и",
+  "создавайте NFT",
+  "Откройте, создайте и продавайте NFT на нашем NFT рынке.",
+  "С более чем тысячами NFT и получите бонус в $20.",
+  "больше о NFT",
+  "трейдинг",
+  "Работы сообщества",
+  "Создатели",
+  "Коллекции",
+];
+const exploreArrRus = [
+  "Изучите рынок",
+  "очистить сортировку",
+  "по ценам",
+  "по цвету NFT",
+  "скрыть похожие",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+  "ставка",
+  "поставить",
+];
+const justArrRus = [
+  "Просто раскройте",
+  "вашего внутреннего коллекционера",
+  "Лучшие продавцы по всему миру",
+  "$2M+ транзакций каждый день",
+  "Безопасные транзакции",
+  "Эксклюзивные коллекции от продавцов",
+  "Лёгкая покупка и продажа",
+  "Присоединяйтесь к нашему сообществу",
+  "узнайть больше",
+  "Лучшие продавцы",
+];
+const preArrRus = [
+  "Создавайте и продавайте NFT",
+  "Самый большой рынок NFT в мире",
+  "Оставьте своё мнение о ntf-remake",
+];
+const tableArrRus = [
+  "Коллекция",
+  "Объём",
+  "% за 24ч",
+  "Минималка",
+  "Владельцы",
+  "Элементы",
+  "Blue Stones",
+  "от redmorrayne",
+  "Green Bubbles",
+  "от whyxies",
+  "Red Waves",
+  "от jacio1",
+  "White Field",
+  "от Fantazer",
+  "Yellow Spot",
+  "от Miph",
+];
+const optionsArrRus = [
+  "Язык",
+  "Английский",
+  "Русский",
+  "Тематика",
+  "Светлая",
+  "Тёмная",
+  "Другое",
+  "Уведомления о тревоге",
+  "Включено",
+  "Выключено",
+  "@redmorrayne",
+  "uid: 0",
+  "",
+];
+const headerArrRus = [
+  "открыть",
+  "исследовать",
+  "раскрыть",
+  "предварительно",
+  "таблица",
+  "комментарии",
+  "изменить настройки",
+];
+const footerArrRus = [
+  "© 2025 EATLY Все права защищены.",
+  "открыть",
+  "исследовать",
+  "раскрыть",
+  "предварительно",
+  "таблица",
+  "комментарии",
+];
+const commentsArrRus = [
+  "Здесь вы можете оставить своё мнение",
+  "введите ваше имя",
+  "что вы думаете?",
+];
+let sectionArrRus = [
+  discoverArrRus,
+  exploreArrRus,
+  justArrRus,
+  preArrRus,
+  tableArrRus,
+  commentsArrRus,
+  optionsArrRus,
+];
+
 // ОБЩИЕ ФУНКЦИИ И ОПИСАНИЕ ПОВЕДЕНИЙ
 // открытие и закрытие настроек
 
@@ -105,8 +351,8 @@ function changeByName(inputName) {
       truePair = el;
     }
   });
-  switcherChange(truePair.children[2], optionObject[inputName]);
   optionChange(inputName, optionObject[inputName]);
+  switcherChange(truePair.children[2], optionObject[inputName]);
 }
 
 // переключение всех свичеров в первое положение
@@ -123,11 +369,29 @@ if (document.fonts) {
 
 function optionChange(name, position) {
   if (name === "Language") {
-    if (position === 0) {
-      // changeLang("Eng");
-    } else if (position === 1) {
-      // changeLang("Rus");
+    let langArr = [];
+    if (position === 1) {
+      langArr = sectionArrRus;
+    } else if (position === 0) {
+      langArr = sectionArrEng;
     }
+    const parent = document.querySelector(".c");
+    for (let i = 0; i < parent.children.length; i++) {
+      let currentArr = langArr[i];
+      if (currentArr) {
+        let section = parent.children[i];
+        let textElements = section.querySelectorAll(".t");
+        for (let j = 0; j < textElements.length; j++) {
+          if (currentArr[j]) {
+            textElements[j].textContent = currentArr[j];
+          }
+        }
+      }
+    }
+    // document.getElementById("options").style.opacity = "0";
+    // setTimeout(() => {
+    //   this.style.display = "none";
+    // }, 200);
   } else if (name === "Theme") {
     if (position === 0) {
       changeTheme("light");
