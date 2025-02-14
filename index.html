@@ -16,8 +16,7 @@
           <button>
             <img
               src="./res/img/Header-logo.png"
-              class="logo"
-              style="padding: 6px"
+              id="logo"
             />
           </button>
           <ul class="nav">
@@ -31,7 +30,7 @@
         </div>
         <div class="header-c">
           <button>
-            <img src="./res/img/j.png" class="logo" />
+            <img src="./res/img/j.png" id="profile" />
           </button>
           <button class="b-btn">
             <span class="t w t-16"> change options </span>
@@ -41,11 +40,11 @@
 
       <div class="c">
         <section id="discover">
-          <div class="discover-c" style="justify-content: space-between">
+          <div class="discover-l">
             <h1>
               <span
                 class="t b t-64"
-                style="text-decoration: overline 1px #c2c3cb"
+                style="text-decoration: overline 1px var(--gr)"
               >
                 Discover and
               </span>
@@ -66,7 +65,7 @@
 
             <!--  -->
 
-            <div style="flex-direction: column; gap: 12px;">
+            <!-- <div style="flex-direction: column; gap: 12px;">
               <span class="t b t-18">
                 Test
               </span>
@@ -79,29 +78,26 @@
                   False
                 </span>
               </button>
-            </div>
+            </div> -->
 
             <!--  -->
 
             <div class="discover-btn-c">
               <div class="discover-s">
-                <span class="t b t-32">430 k+</span>
+                <span class="b t-32">430 k+</span>
                 <span class="t b t-12">Art works</span>
               </div>
               <div class="discover-s">
-                <span class="t b t-32">159 k+</span>
+                <span class="b t-32">159 k+</span>
                 <span class="t b t-12">Creators</span>
               </div>
               <div class="discover-s">
-                <span class="t b t-32">1 200+</span>
+                <span class="b t-32">1 200+</span>
                 <span class="t b t-12">Collections</span>
               </div>
             </div>
           </div>
-          <div
-            class="discover-c"
-            style="margin-right: 120px; align-items: center"
-          >
+          <div class="discover-r">
             <img src="./res/svg/dots.svg" class="dots" />
             <svg
               width="131"
@@ -167,7 +163,10 @@
             </button>
           </div>
           <div class="explore-holder-c">
-            <div class="holder">
+
+            <!--  -->
+
+            <!-- <div class="holder">
               <img src="./res/img/icons/BlueStones.png" class="holder-img" />
               <span class="t b t-24"> sun glasses </span>
               <div class="holder-bot">
@@ -182,7 +181,10 @@
                   <span class="t w t-16"> place bid </span>
                 </button>
               </div>
-            </div>
+            </div> -->
+
+            <!--  -->
+
           </div>
         </section>
 
@@ -313,8 +315,8 @@
             <div class="just-right-line">
               <img src="./res/img/herta.jpg" class="round-img">
               <div class="follow-text-c">
-                <span class="t b t-18">The Herta</span>
-                <span class="t b t-14">1 200</span>
+                <span class="b t-18">The Herta</span>
+                <span class="b t-14">1 200</span>
               </div>
               <button class="w-btn-o">
                 <span class="t w t-16">
@@ -654,10 +656,10 @@
             <div class="comments-line">
               <img src="./res/img/herta.jpg" class="round-img">
               <div class="comments-text">
-                <span class="t b t-18">
+                <span class="b t-18">
                   The Herta
                 </span>
-                <span class="t b t-12">
+                <span class="b t-12">
                   This redmorrayne guy can surely create web sites
                 </span>
               </div>
@@ -727,9 +729,11 @@
               <span class="t b t-14">
                 @redmorrayne
               </span>
-              <img src="./res/img/j.png" id="optionsLogo">
               <span class="t b t-14">
                 uid: 0
+              </span>
+              <img src="./res/img/j.png" id="optionsLogo">
+              <span class="t b t-14">
               </span>
             </div>
           </div>
@@ -761,8 +765,8 @@
         </div>
       </footer>
     </div>
-    <script src="./js/base.js"></script>
-    <script src="./js/options.js"></script>
     <script src="./js/ready.js"></script>
+    <script src="./js/generate.js"></script>
+    <script src="./js/options.js"></script>
   </body>
 </html>

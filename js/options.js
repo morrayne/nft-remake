@@ -13,7 +13,7 @@ let openOptions = document.querySelectorAll(".header-c")[1];
 openOptions.addEventListener("click", function (event) {
   if (event.target.closest("button")) {
     document.getElementById("options").style.display = "flex";
-    loadAll();
+    loadOptions();
     setTimeout(() => {
       document.getElementById("options").style.opacity = "1";
     }, 200);
@@ -39,8 +39,9 @@ function switcherChange(switcher, position) {
   let arr = [];
   for (i = 1; i < switcher.children.length; i++) {
     arr.push(switcher.children[i].clientWidth);
+    switcher.children[i].style.color = "";
   }
-  console.log(arr);
+  switcher.children[position + 1].style.color = "var(--bl)";
   let runner = switcher.children[0];
   runner.style.width = arr[position] + 8 + "px";
   // runner.style.height = switcher.clientHeight - 8 + "px";
@@ -105,6 +106,7 @@ function changeByName(inputName) {
     }
   });
   switcherChange(truePair.children[2], optionObject[inputName]);
+  optionChange(inputName, optionObject[inputName]);
 }
 
 // переключение всех свичеров в первое положение
@@ -117,14 +119,72 @@ if (document.fonts) {
   });
 }
 
+// фактическое переключение настроек
+
+function optionChange(name, position) {
+  if (name === "Language") {
+    if (position === 0) {
+      // changeLang("Eng");
+    } else if (position === 1) {
+      // changeLang("Rus");
+    }
+  } else if (name === "Theme") {
+    if (position === 0) {
+      changeTheme("light");
+    } else if (position === 1) {
+      changeTheme("dark");
+    }
+  } else if (name === "Notifications") {
+    if (position === 0) {
+    } else if (position === 1) {
+    }
+  }
+}
+
+// ФУНКЦИИ ДЛЯ СМЕНЫ НАСТРОЕК
+// смена темы
+
+function changeTheme(inputTheme) {
+  if (inputTheme === "dark") {
+    document.body.style.setProperty("--bl", "#fff");
+    document.body.style.setProperty("--bl20", "#ffffff10");
+    document.body.style.setProperty("--wh", "#000");
+    document.body.style.setProperty("--wh20", "#00000010");
+    document.body.style.setProperty("--gr", "#9b9b9b50");
+    document.body.style.setProperty("--gr20", "#9b9b9b");
+    document.querySelectorAll(".gem").forEach(function (el) {
+      el.style.filter = "brightness(100)";
+    });
+    document.querySelectorAll(".gal").forEach(function (el) {
+      el.style.filter = "invert(1)";
+    });
+    document.getElementById("footerLogo").style.filter = "brightness(0)";
+    document.getElementById("logo").style.filter = "brightness(100)";
+  } else {
+    document.body.style.setProperty("--bl", "#000");
+    document.body.style.setProperty("--bl20", "#00000020");
+    document.body.style.setProperty("--wh", "#fff");
+    document.body.style.setProperty("--wh20", "#ffffff20");
+    document.body.style.setProperty("--gr", "#cbcbcb");
+    document.body.style.setProperty("--gr20", "#cbcbcb80");
+    document.querySelectorAll(".gem").forEach(function (el) {
+      el.style.filter = "";
+    });
+    document.querySelectorAll(".gal").forEach(function (el) {
+      el.style.filter = "";
+    });
+    document.getElementById("footerLogo").style.filter = "brightness(100)";
+    document.getElementById("logo").style.filter = "brightness(0)";
+  }
+}
+
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
 // форматирование имен
 
 function removeAdjacentSpaces(input) {
   return input.replace(/s{2,}/g, " ").trim();
 }
-function loadAll(){
-  loadOptions();
-  // здесь возможно будет подгрузка подписок
-  // здесь возможно будет подгрузка комментариев
-}
+
+//
+
+loadOptions();

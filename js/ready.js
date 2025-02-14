@@ -26,6 +26,13 @@ document
 // НАВИГАЦИЯ
 
 document.querySelectorAll(".nav").forEach(function (el) {
+  // распределение классов для адаптации
+  for (let i = 0; i < el.children.length; i++) {
+    el.children[i].classList.add("navBtn" + i);
+  }
+
+  // рабочая часть навигации
+  const screenWidth = screen.width;
   el.addEventListener("click", function (event) {
     let targetElement;
     const buttons = el.querySelectorAll("button");
@@ -35,9 +42,11 @@ document.querySelectorAll(".nav").forEach(function (el) {
       }
     });
     if (targetElement) {
-      const elementPosition =
-        targetElement.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - 90;
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      let offsetPosition = elementPosition - 90;
+      if (screenWidth < 720) {
+        offsetPosition = elementPosition - 120;
+      }
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   });
