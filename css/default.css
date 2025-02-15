@@ -72,7 +72,7 @@ section {
   height: 48px;
   padding: 0px 12px;
   background-color: var(--wh);
-  outline: solid 1px var(--bl);
+  border: solid 1px var(--bl);
   border-radius: 8px;
   align-items: center;
 }
@@ -81,9 +81,15 @@ section {
   height: 48px;
   padding: 0px 12px;
   background-color: var(--bl);
-  outline: solid 1px var(--wh);
+  border: solid 1px var(--wh);
   border-radius: 8px;
   align-items: center;
+}
+.b-btn-o:focus {
+  border: solid 1px var(--bl);
+}
+.w-btn-o:focus {
+  border: solid 1px var(--wh);
 }
 
 /* TEXTS */

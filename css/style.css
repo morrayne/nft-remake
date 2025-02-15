@@ -127,6 +127,9 @@ header {
 .explore-btn-c {
   gap: 18px;
 }
+.explore-btn-c .b-btn-o {
+  transition: 0.2s;
+}
 .explore-holder-c {
   width: 100%;
   display: grid;

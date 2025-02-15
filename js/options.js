@@ -242,69 +242,11 @@ let sectionArrRus = [
   optionsArrRus,
 ];
 
-// ОБЩИЕ ФУНКЦИИ И ОПИСАНИЕ ПОВЕДЕНИЙ
-// открытие и закрытие настроек
-
-document.getElementById("options").addEventListener("click", function (event) {
-  if (event.target === this) {
-    this.style.opacity = "0";
-    setTimeout(() => {
-      this.style.display = "none";
-    }, 200);
-  }
-});
-let openOptions = document.querySelectorAll(".header-c")[1];
-openOptions.addEventListener("click", function (event) {
-  if (event.target.closest("button")) {
-    document.getElementById("options").style.display = "flex";
-    loadOptions();
-    setTimeout(() => {
-      document.getElementById("options").style.opacity = "1";
-    }, 200);
-  }
-});
-
-// возможность переключать свичер
-
-document.querySelectorAll(".switch-holder").forEach(function (switcher) {
-  switcher.addEventListener("click", function (event) {
-    for (let i = 1; i < switcher.children.length; i++) {
-      if (switcher.children[i] === event.target) {
-        switcherChange(switcher, i - 1);
-      }
-    }
-  });
-});
-
-// описание алгоритма переключения свичера
-
-const switchGap = 18;
-function switcherChange(switcher, position) {
-  let arr = [];
-  for (i = 1; i < switcher.children.length; i++) {
-    arr.push(switcher.children[i].clientWidth);
-    switcher.children[i].style.color = "";
-  }
-  switcher.children[position + 1].style.color = "var(--bl)";
-  let runner = switcher.children[0];
-  runner.style.width = arr[position] + 8 + "px";
-  // runner.style.height = switcher.clientHeight - 8 + "px";
-  let margin = 0;
-  if (position === 0) {
-    runner.style.marginLeft = margin + "px";
-  } else {
-    for (let i = 0; i < position; i++) {
-      margin += arr[i];
-    }
-    runner.style.marginLeft = margin + switchGap * position + "px";
-  }
-}
-
 // СВИЧЕРЫ ВНУТРИ НАСТРОЕК
 // инициализация объекта
+
 let optionObject = {};
 let optionsLeft = document.querySelector(".options-left");
-
 function loadOptions() {
   if (localStorage.getItem("options")) {
     optionObject = JSON.parse(localStorage.getItem("options"));
@@ -318,7 +260,7 @@ function loadOptions() {
       changeByName(name);
     });
   }
-}
+} 
 
 // описание алгоритма изменение объекта настроек
 
@@ -353,16 +295,6 @@ function changeByName(inputName) {
   switcherChange(truePair.children[2], optionObject[inputName]);
 }
 
-// переключение всех свичеров в первое положение
-
-if (document.fonts) {
-  document.fonts.ready.then(() => {
-    document.querySelectorAll(".switch-holder").forEach(function (switcher) {
-      switcherChange(switcher, 0);
-    });
-  });
-}
-
 // фактическое переключение настроек
 
 function optionChange(name, position) {
@@ -374,22 +306,14 @@ function optionChange(name, position) {
       langArr = sectionArrRus;
       headerArr = headerArrRus;
       footerArr = footerArrRus;
-      document
-        .querySelectorAll(".inputs")[0]
-        .setAttribute("placeholder", commentsArrRus[1]);
-      document
-        .querySelectorAll(".inputs")[1]
-        .setAttribute("placeholder", commentsArrRus[2]);
+      document.querySelectorAll(".inputs")[0].setAttribute("placeholder", commentsArrRus[1]);
+      document.querySelectorAll(".inputs")[1].setAttribute("placeholder", commentsArrRus[2]);
     } else if (position === 0) {
       langArr = sectionArrEng;
       headerArr = headerArrEng;
       footerArr = footerArrEng;
-      document
-        .querySelectorAll(".inputs")[0]
-        .setAttribute("placeholder", commentsArrEng[1]);
-      document
-        .querySelectorAll(".inputs")[1]
-        .setAttribute("placeholder", commentsArrEng[2]);
+      document.querySelectorAll(".inputs")[0].setAttribute("placeholder", commentsArrEng[1]);
+      document.querySelectorAll(".inputs")[1].setAttribute("placeholder", commentsArrEng[2]);
     }
     for (let i = 0; i < document.querySelector(".c").children.length; i++) {
       let currentArr = langArr[i];
@@ -406,6 +330,9 @@ function optionChange(name, position) {
     for (let j = 0; j < footer.querySelectorAll(".t").length; j++) {
       footer.querySelectorAll(".t")[j].textContent = footerArr[j];
     }
+    document.querySelectorAll(".switch-holder").forEach(function(el) {
+      rePressSwitcher(el);
+    })
   } else if (name === "Theme") {
     if (position === 0) {
       changeTheme("light");
@@ -456,6 +383,20 @@ function changeTheme(inputTheme) {
   }
 }
 
+// 
+
+function rePressSwitcher (switcher) {
+  let switcherLength = switcher.children.length - 1;
+  let position = 0;
+  for (let i = 0; i < switcherLength; i++) {
+    if (switcher.classList.contains("swPos" + i)) {
+      position = i;
+    }
+  }
+  switcherChange(switcher, position);
+  // console.log(position);
+}
+
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
 // форматирование имен
 
@@ -466,5 +407,3 @@ function removeAdjacentSpaces(input) {
 //
 
 loadOptions();
-// localStorage.setItem("options", "");
-// console.log(localStorage.getItem("options"));
