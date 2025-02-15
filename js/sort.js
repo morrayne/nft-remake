@@ -103,6 +103,10 @@ btnHolder.addEventListener("click", function (event) {
     let newHolderOrder = allHolderOriginal;
     if (btnHolder.children[0] === btn) {
       newHolderOrder = sortHolders(holderArr, "index");
+      setTimeout(() => {
+        btn.style.backgroundColor = "var(--wh)";
+        btn.children[0].style.color = "var(--bl)";
+      }, 600);
     } else if (btnHolder.children[1] === btn) {
       newHolderOrder = sortHolders(holderArr, "name");
     } else if (btnHolder.children[2] === btn) {
