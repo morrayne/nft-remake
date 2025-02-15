@@ -438,3 +438,35 @@ footer {
 .options-hidden {
   display: none;
 }
+
+/*  */
+
+#notifications {
+  max-width: 1920px;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  position: fixed;
+  z-index: 5;
+  bottom: 20px;
+  pointer-events: none;
+  padding: 0px 20px;
+}
+.notification-c {
+  width: 40%;
+  height: fit-content;
+  max-height: 480px;
+  overflow-y: hidden;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 20px;
+}
+.not {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  background-color: var(--bl);
+  padding: 8px 12px;
+  cursor: text;
+  transition: 0.2s;
+}

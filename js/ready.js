@@ -41,14 +41,30 @@ document.querySelectorAll(".nav").forEach(function (el) {
         targetElement = document.querySelector(".c").children[index];
       }
     });
-    if (targetElement) { 
-      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    if (targetElement) {
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
       let offsetPosition = elementPosition - 90;
       if (screenWidth < 720) {
         offsetPosition = elementPosition - 120;
       }
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
+  });
+});
+
+//
+
+document
+  .querySelector(".explore-holder-c")
+  .addEventListener("click", function (event) {
+    if (event.target.closest(".b-btn")) {
+      createNot(notArr[1]);
+    }
+  });
+document.querySelectorAll(".nocontent").forEach(function (el) {
+  el.addEventListener("click", function () {
+    createNot(notArr[2]);
   });
 });
 
@@ -61,6 +77,7 @@ document.getElementById("options").addEventListener("click", function (event) {
     setTimeout(() => {
       this.style.display = "none";
     }, 200);
+    createNot(notArr[0]);
   }
 });
 let openOptions = document.querySelectorAll(".header-c")[1];

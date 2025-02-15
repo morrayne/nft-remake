@@ -14,9 +14,9 @@ const discoverArrEng = [
 const exploreArrEng = [
   "Explore marketplace",
   "refresh filters",
-  "price manage",
-  "image color",
-  "hide similar",
+  "name manage",
+  "image sort",
+  "price control",
   "current bid",
   "place bid",
   "current bid",
@@ -80,7 +80,7 @@ const optionsArrEng = [
   "Theme",
   "Light",
   "Dark",
-  "Notifications alert",
+  "Notifications",
   "On",
   "Off",
   "@redmorrayne",
@@ -119,6 +119,11 @@ let sectionArrEng = [
   commentsArrEng,
   optionsArrEng,
 ];
+const notArrEng = [
+  "Your options choices were saved",
+  "You don't have enough credits for this operation",
+  "This function is currently in progress"
+]
 
 // русская локализация
 
@@ -135,10 +140,10 @@ const discoverArrRus = [
 ];
 const exploreArrRus = [
   "Изучите рынок",
-  "очистить сортировку",
-  "по ценам",
+  "очистить фильтр",
+  "по имени",
   "по цвету NFT",
-  "скрыть похожие",
+  "по вложениям",
   "ставка",
   "поставить",
   "ставка",
@@ -241,6 +246,11 @@ let sectionArrRus = [
   commentsArrRus,
   optionsArrRus,
 ];
+const notArrRus = [
+  "Ваш выбор настроек был сохранен",
+  "На вашем балансе не достаточно средств для этой операции",
+  "В данный момент эта функция недоступна"
+]
 
 // СВИЧЕРЫ ВНУТРИ НАСТРОЕК
 // инициализация объекта
@@ -249,6 +259,7 @@ let optionObject = {};
 let optionsLeft = document.querySelector(".options-left");
 function loadOptions() {
   if (localStorage.getItem("options")) {
+    // createNot("Your options choices were loaded");
     optionObject = JSON.parse(localStorage.getItem("options"));
     Object.keys(optionObject).forEach((name) => {
       changeByName(name);
@@ -297,18 +308,21 @@ function changeByName(inputName) {
 
 // фактическое переключение настроек
 
+let notArr = [];
 function optionChange(name, position) {
   if (name === "Language") {
     let langArr = [];
     let headerArr = [];
     let footerArr = [];
     if (position === 1) {
+      notArr = notArrRus;
       langArr = sectionArrRus;
       headerArr = headerArrRus;
       footerArr = footerArrRus;
       document.querySelectorAll(".inputs")[0].setAttribute("placeholder", commentsArrRus[1]);
       document.querySelectorAll(".inputs")[1].setAttribute("placeholder", commentsArrRus[2]);
     } else if (position === 0) {
+      notArr = notArrEng;
       langArr = sectionArrEng;
       headerArr = headerArrEng;
       footerArr = footerArrEng;
@@ -339,9 +353,12 @@ function optionChange(name, position) {
     } else if (position === 1) {
       changeTheme("dark");
     }
-  } else if (name === "Notifications") {
+  } else if (name === "Notifications alert") {
+    let notc = document.getElementById("notifications");
     if (position === 0) {
+      notc.style.display = "flex";
     } else if (position === 1) {
+      notc.style.display = "none";
     }
   }
 }
@@ -407,3 +424,7 @@ function removeAdjacentSpaces(input) {
 //
 
 loadOptions();
+
+
+
+
