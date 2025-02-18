@@ -453,17 +453,17 @@ footer {
   padding: 0px 20px;
 }
 .notification-c {
-  width: 40%;
+  width: fit-content;
   height: fit-content;
   max-height: 480px;
   overflow-y: hidden;
   flex-direction: column;
   gap: 12px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 .not {
-  width: fit-content;
-  height: fit-content;
+  width: min-content;
+  height: min-content;
   border-radius: 8px;
   background-color: var(--bl);
   padding: 8px 12px;

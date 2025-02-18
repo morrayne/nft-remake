@@ -23,6 +23,18 @@ document
     });
   });
 
+// СОЗДАНИЕ СЛУЧАЙНЫХ ЧИСЕЛ У ТАБЛИЦЫ
+
+function removeAdjacentSpaces(input) {
+  return input.replace(/s{2,}/g, " ").trim();
+}
+const table = document.getElementById("table");
+table.querySelectorAll("span").forEach(function (el) {
+  if (removeAdjacentSpaces(el.textContent) === "random number") {
+    el.textContent = (Math.floor(Math.random() * (99 - 10 + 1)) + 10) * 10;
+  }
+});
+
 // НАВИГАЦИЯ
 
 document.querySelectorAll(".nav").forEach(function (el) {
@@ -59,12 +71,12 @@ document
   .querySelector(".explore-holder-c")
   .addEventListener("click", function (event) {
     if (event.target.closest(".b-btn")) {
-      createNot(notArr[1]);
-    }
+      createNot(1);
+    } 
   });
 document.querySelectorAll(".nocontent").forEach(function (el) {
   el.addEventListener("click", function () {
-    createNot(notArr[2]);
+    createNot(2);
   });
 });
 
@@ -77,7 +89,7 @@ document.getElementById("options").addEventListener("click", function (event) {
     setTimeout(() => {
       this.style.display = "none";
     }, 200);
-    createNot(notArr[0]);
+    createNot(0);
   }
 });
 let openOptions = document.querySelectorAll(".header-c")[1];

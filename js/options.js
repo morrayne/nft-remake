@@ -1,257 +1,3 @@
-// английская локализация
-
-const discoverArrEng = [
-  "Discover and",
-  "create NFTs",
-  "Discover, Create and Sell NFTs On Our NFT Marketplace",
-  "With Over Thousands Of NFTs And Get a $20 bonus.",
-  "about NFTs",
-  "to traidings",
-  "Art works",
-  "Creators",
-  "Collections",
-];
-const exploreArrEng = [
-  "Explore marketplace",
-  "refresh filters",
-  "name manage",
-  "image sort",
-  "price control",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-  "current bid",
-  "place bid",
-];
-const justArrEng = [
-  "Just unleash",
-  "your inner collector",
-  "Best seller all around the world",
-  "$2M+ transections every day",
-  "Secure transactions",
-  "Exclusive collections from sellers",
-  "Easy buying and selling",
-  "Join our community",
-  "explore more",
-  "Best sellers",
-];
-const preArrEng = [
-  "Create and sell NFTs",
-  "World’s largest NFT marketplace",
-  "Leave your opinion about ntf-remake",
-];
-const tableArrEng = [
-  "Collection",
-  "Volume",
-  "% per 24h",
-  "Floor price",
-  "Owners",
-  "Items",
-  "Blue Stones",
-  "by redmorrayne",
-  "Green Bubbles",
-  "by whyxies",
-  "Red Waves",
-  "by jacio1",
-  "White Field",
-  "by Fantazer",
-  "Yellow Spot",
-  "by Miph",
-];
-const optionsArrEng = [
-  "Language",
-  "English",
-  "Russian",
-  "Theme",
-  "Light",
-  "Dark",
-  "Notifications",
-  "On",
-  "Off",
-  "@redmorrayne",
-  "uid: 0",
-  "",
-];
-const headerArrEng = [
-  "discover",
-  "explore",
-  "unleash",
-  "pre",
-  "table",
-  "comments",
-  "change options",
-];
-const footerArrEng = [
-  "© 2025 EATLY All Rights Reserved.",
-  "discover",
-  "explore",
-  "unleash",
-  "pre",
-  "table",
-  "comments",
-];
-const commentsArrEng = [
-  "You can leave your comments here",
-  "enter your name",
-  "what do you think",
-];
-let sectionArrEng = [
-  discoverArrEng,
-  exploreArrEng,
-  justArrEng,
-  preArrEng,
-  tableArrEng,
-  commentsArrEng,
-  optionsArrEng,
-];
-const notArrEng = [
-  "Your options choices were saved",
-  "You don't have enough credits for this operation",
-  "This function is currently in progress"
-]
-
-// русская локализация
-
-const discoverArrRus = [
-  "Познавайте и",
-  "создавайте NFT",
-  "Откройте, создайте и продавайте NFT на нашем NFT рынке.",
-  "С более чем тысячами NFT и получите бонус в $20.",
-  "больше о NFT",
-  "трейдинг",
-  "Работы сообщества",
-  "Создатели",
-  "Коллекции",
-];
-const exploreArrRus = [
-  "Изучите рынок",
-  "очистить фильтр",
-  "по имени",
-  "по цвету NFT",
-  "по вложениям",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-  "ставка",
-  "поставить",
-];
-const justArrRus = [
-  "Просто раскройте",
-  "вашего внутреннего коллекционера",
-  "Лучшие продавцы по всему миру",
-  "$2M+ транзакций каждый день",
-  "Безопасные транзакции",
-  "Эксклюзивные коллекции от продавцов",
-  "Лёгкая покупка и продажа",
-  "Присоединяйтесь к нашему сообществу",
-  "узнайть больше",
-  "Лучшие продавцы",
-];
-const preArrRus = [
-  "Создавайте и продавайте NFT",
-  "Самый большой рынок NFT в мире",
-  "Оставьте своё мнение о ntf-remake",
-];
-const tableArrRus = [
-  "Коллекция",
-  "Объём",
-  "% за 24ч",
-  "Минимум",
-  "Владельцы",
-  "Элементы",
-  "Blue Stones",
-  "от redmorrayne",
-  "Green Bubbles",
-  "от whyxies",
-  "Red Waves",
-  "от jacio1",
-  "White Field",
-  "от Fantazer",
-  "Yellow Spot",
-  "от Miph",
-];
-const optionsArrRus = [
-  "Язык",
-  "Английский",
-  "Русский",
-  "Тематика",
-  "Светлая",
-  "Тёмная",
-  "Уведомления",
-  "Включено",
-  "Выключено",
-  "@redmorrayne",
-  "uid: 0",
-  "",
-];
-const headerArrRus = [
-  "начать",
-  "рынок",
-  "коллекция",
-  "о NFT",
-  "таблица",
-  "отзывы",
-  "изменить настройки",
-];
-const footerArrRus = [
-  "© 2025 EATLY Все права защищены.",
-  "начать",
-  "рынок",
-  "коллекция",
-  "о NFT",
-  "таблица",
-  "отзывы",
-];
-const commentsArrRus = [
-  "Здесь вы можете оставить своё мнение",
-  "введите ваше имя",
-  "что вы думаете?",
-];
-let sectionArrRus = [
-  discoverArrRus,
-  exploreArrRus,
-  justArrRus,
-  preArrRus,
-  tableArrRus,
-  commentsArrRus,
-  optionsArrRus,
-];
-const notArrRus = [
-  "Ваш выбор настроек был сохранен",
-  "На вашем балансе не достаточно средств для этой операции",
-  "В данный момент эта функция недоступна"
-]
-
 // СВИЧЕРЫ ВНУТРИ НАСТРОЕК
 // инициализация объекта
 
@@ -259,7 +5,6 @@ let optionObject = {};
 let optionsLeft = document.querySelector(".options-left");
 function loadOptions() {
   if (localStorage.getItem("options")) {
-    // createNot("Your options choices were loaded");
     optionObject = JSON.parse(localStorage.getItem("options"));
     Object.keys(optionObject).forEach((name) => {
       changeByName(name);
@@ -271,7 +16,7 @@ function loadOptions() {
       changeByName(name);
     });
   }
-} 
+}
 
 // описание алгоритма изменение объекта настроек
 
@@ -306,47 +51,30 @@ function changeByName(inputName) {
   switcherChange(truePair.children[2], optionObject[inputName]);
 }
 
-// фактическое переключение настроек
+// ФУНКЦИЯ ОТВЕТСТВЕННАЯ ЗА ФАКТИЧЕСКУЮ СМЕНУ НАСТРОЕК
 
-let notArr = [];
 function optionChange(name, position) {
   if (name === "Language") {
-    let langArr = [];
-    let headerArr = [];
-    let footerArr = [];
-    if (position === 1) {
-      notArr = notArrRus;
-      langArr = sectionArrRus;
-      headerArr = headerArrRus;
-      footerArr = footerArrRus;
-      document.querySelectorAll(".inputs")[0].setAttribute("placeholder", commentsArrRus[1]);
-      document.querySelectorAll(".inputs")[1].setAttribute("placeholder", commentsArrRus[2]);
-    } else if (position === 0) {
-      notArr = notArrEng;
-      langArr = sectionArrEng;
-      headerArr = headerArrEng;
-      footerArr = footerArrEng;
-      document.querySelectorAll(".inputs")[0].setAttribute("placeholder", commentsArrEng[1]);
-      document.querySelectorAll(".inputs")[1].setAttribute("placeholder", commentsArrEng[2]);
+    if (position === 0) {
+      translate("en");
+      document
+        .querySelectorAll(".inputs")[0]
+        .setAttribute("placeholder", "enter your name");
+      document
+        .querySelectorAll(".inputs")[1]
+        .setAttribute("placeholder", "what do you think?");
+    } else {
+      translate("ru");
+      document
+        .querySelectorAll(".inputs")[0]
+        .setAttribute("placeholder", "введите свое имя");
+      document
+        .querySelectorAll(".inputs")[1]
+        .setAttribute("placeholder", "что вы думаете?");
     }
-    for (let i = 0; i < document.querySelector(".c").children.length; i++) {
-      let currentArr = langArr[i];
-      let section = document.querySelector(".c").children[i];
-      for (let j = 0; j < section.querySelectorAll(".t").length; j++) {
-        section.querySelectorAll(".t")[j].textContent = currentArr[j];
-      }
-    }
-    let header = document.querySelector("header");
-    for (let j = 0; j < header.querySelectorAll(".t").length; j++) {
-      header.querySelectorAll(".t")[j].textContent = headerArr[j];
-    }
-    let footer = document.querySelector("footer");
-    for (let j = 0; j < footer.querySelectorAll(".t").length; j++) {
-      footer.querySelectorAll(".t")[j].textContent = footerArr[j];
-    }
-    document.querySelectorAll(".switch-holder").forEach(function(el) {
+    document.querySelectorAll(".switch-holder").forEach(function (el) {
       rePressSwitcher(el);
-    })
+    });
   } else if (name === "Theme") {
     if (position === 0) {
       changeTheme("light");
@@ -363,8 +91,7 @@ function optionChange(name, position) {
   }
 }
 
-// ФУНКЦИИ ДЛЯ СМЕНЫ НАСТРОЕК
-// смена темы
+// ВООЗМОЖНОСТЬ МЕНЯТЬ ТЕМУ
 
 function changeTheme(inputTheme) {
   if (inputTheme === "dark") {
@@ -400,9 +127,9 @@ function changeTheme(inputTheme) {
   }
 }
 
-// 
+// функция перерасчёта ширина свичера после смены языка
 
-function rePressSwitcher (switcher) {
+function rePressSwitcher(switcher) {
   let switcherLength = switcher.children.length - 1;
   let position = 0;
   for (let i = 0; i < switcherLength; i++) {
@@ -411,7 +138,243 @@ function rePressSwitcher (switcher) {
     }
   }
   switcherChange(switcher, position);
-  // console.log(position);
+}
+
+//  СОЗДАНИЕ КАРТОЧЕК HOLDER
+// массивы имён и путей изображений
+
+const nftNames = [
+  "Lunar echo",
+  "Silent wave",
+  "Golden spark",
+  "Crimson whirl",
+  "Mystic pulse",
+  "Echoing dream",
+  "Vibrant shade",
+  "Frosted glimmer",
+  "Radiant whisper",
+  "Eternal glow",
+  "Twilight breeze",
+  "Hidden gem",
+  "Celestial drift",
+  "Infinite canvas",
+  "Shimmering horizon",
+  "Dancing light",
+  "Serene vista",
+  "Wandering soul",
+  "Timeless rhythm",
+  "Ethereal touch",
+];
+const imgScr = [
+  "./res/img/icons/BlueStones.png",
+  "./res/img/icons/GreenBubbles.png",
+  "./res/img/icons/RedWaves.png",
+  "./res/img/icons/WhiteField.png",
+  "./res/img/icons/YellowSpot.png",
+];
+
+// создание объектов для карточек
+
+let holderArr = [];
+for (let i = 0; i < 10; i++) {
+  let holder = {
+    name: "",
+    img: "",
+    value: "",
+    index: i,
+  };
+  const randomIndex = Math.floor(Math.random() * nftNames.length);
+  holder.name = nftNames[randomIndex];
+  nftNames.splice(randomIndex, 1);
+  holder.img = imgScr[Math.floor(Math.random() * imgScr.length)];
+  holder.value = (Math.floor(Math.random() * (99 - 10 + 1)) + 10) * 10;
+  holderArr.push(holder);
+}
+for (let i = 0; i < holderArr.length; i++) {
+  createHolder(holderArr[i]);
+}
+
+// создание карточки из объекта
+
+function createHolder(selectedObject) {
+  const holder = document.createElement("div");
+  holder.classList.add("holder");
+  holder.classList.add("hNum" + selectedObject.index);
+  let img = document.createElement("img");
+  img.setAttribute("src", selectedObject.img);
+  img.classList.add("holder-img");
+  let name = document.createElement("span");
+  name.textContent = selectedObject.name;
+  name.classList.add("b", "t-20");
+  const holderBot = document.createElement("div");
+  holderBot.classList.add("holder-bot");
+  const holderLeft = document.createElement("div");
+  holderLeft.classList.add("holder-left");
+  let bid = document.createElement("span");
+  bid.setAttribute("data-t-en", "current bid");
+  bid.setAttribute("data-t-ru", "ставка");
+  bid.classList.add("t", "b", "t-16");
+  const holderGem = document.createElement("div");
+  holderGem.classList.add("holder-gem");
+  const gem = document.createElement("img");
+  gem.setAttribute("src", "./res/svg/gem.svg");
+  gem.classList.add("gem");
+  let value = document.createElement("span");
+  value.textContent = selectedObject.value;
+  value.classList.add("b", "t-16");
+  const blackButton = document.createElement("button");
+  blackButton.classList.add("b-btn");
+  const blackButtonText = document.createElement("span");
+  blackButtonText.classList.add("t", "w", "t-16");
+  blackButtonText.setAttribute("data-t-en", "place bid");
+  blackButtonText.setAttribute("data-t-ru", "поставить");
+
+  blackButton.append(blackButtonText);
+  holderGem.append(gem, value);
+  holderLeft.append(bid, holderGem);
+  holderBot.append(holderLeft, blackButton);
+  holder.append(img, name, holderBot);
+
+  document.querySelector(".explore-holder-c").appendChild(holder);
+}
+
+// сортировка карточки по вводным параметрам
+
+let btnHolder = document.querySelector(".explore-btn-c");
+let allHolderOriginal = document.querySelector(".explore-holder-c").children;
+
+btnHolder.addEventListener("click", function (event) {
+  for (let i = 0; i < btnHolder.children.length; i++) {
+    btnHolder.children[i].style.backgroundColor = "var(--wh)";
+    btnHolder.children[i].children[0].style.color = "var(--bl)";
+  }
+  if (event.target.closest("button")) {
+    let btn = event.target.closest("button");
+    btn.style.backgroundColor = "var(--bl)";
+    btn.children[0].style.color = "var(--wh)";
+    let newHolderOrder = allHolderOriginal;
+    if (btnHolder.children[0] === btn) {
+      newHolderOrder = sortHolders(holderArr, "index");
+      setTimeout(() => {
+        btn.style.backgroundColor = "var(--wh)";
+        btn.children[0].style.color = "var(--bl)";
+      }, 600);
+    } else if (btnHolder.children[1] === btn) {
+      newHolderOrder = sortHolders(holderArr, "name");
+    } else if (btnHolder.children[2] === btn) {
+      newHolderOrder = sortHolders(holderArr, "img");
+    } else if (btnHolder.children[3] === btn) {
+      newHolderOrder = sortHolders(holderArr, "value");
+    }
+    let parent = document.querySelector(".explore-holder-c");
+    while (parent.children.length !== 0) {
+      parent.removeChild(parent.firstChild);
+    }
+    for (let i = 0; i < newHolderOrder.length; i++) {
+      createHolder(newHolderOrder[i]);
+    }
+    // мини перевод
+    const toTranslate = parent.querySelectorAll(".t");
+    toTranslate.forEach((el) => {
+      const attr = "data-t-" + localStorage.getItem("lang");
+      const tr = el.getAttribute(attr);
+      if (tr) {
+        el.textContent = tr;
+      }
+    });
+  }
+});
+
+// функция сортировки карточек по их объектам
+
+function sortHolders(arr, j) {
+  switch (j) {
+    case "index":
+      return arr.sort((a, b) => a.index - b.index);
+    case "name":
+      return arr.sort((a, b) => a.name.localeCompare(b.name));
+    case "img":
+      return arr.sort((a, b) => a.img.localeCompare(b.img));
+    case "value":
+      return arr.sort((a, b) => b.value - a.value);
+    default:
+      return arr;
+  }
+}
+
+// УВЕДОМЛЕНИЯ
+// перевод для текста уведомлений
+
+let waitArr = [];
+const maxNotifications = 5;
+let notArrRu = [
+  "Ваш выбор настроек был сохранен",
+  "У вас недостаточно средств на балансе",
+  "Данная функция находится в разработке",
+];
+let notArrEn = [
+  "Your options choises were saved",
+  "You don't have enough credits on your account",
+  "This function is currently in development",
+];
+
+// создание уведомления
+
+function createNot(notIndex) {
+  let parent = document.getElementById("notifications");
+  let not = document.createElement("span");
+  not.classList.add("w", "t-18", "t", "not");
+  let notArr = [];
+  if (optionObject.Language === 0) {
+    notArr = notArrEn;
+  } else if (optionObject.Language === 1) {
+    notArr = notArrRu;
+  }
+  if (notIndex >= 0 && notIndex < notArr.length) {
+    not.textContent = notArr[notIndex];
+    if (parent.children[0].children.length < maxNotifications) {
+      parent.children[0].append(not);
+      decay(not);
+    } else {
+      waitArr.push(notIndex);
+      console.log(waitArr);
+      manageNotifications(parent);
+    }
+  }
+}
+
+// лист ожидания уведомлений
+
+function manageNotifications(parent) {
+  const interval = setInterval(() => {
+    if (parent.children[0].children.length >= maxNotifications) {
+      const oldestNot = parent.children[0].children[0];
+      oldestNot.style.opacity = "0";
+      setTimeout(() => {
+        oldestNot.remove();
+        if (waitArr.length > 0) {
+          const nextNotIndex = waitArr.shift();
+          createNot(nextNotIndex);
+        }
+      }, 200);
+    } else {
+      clearInterval(interval);
+    }
+  }, 1000);
+}
+
+// самоуничтожение спустя время
+
+function decay(not) {
+  setTimeout(() => {
+    not.style.opacity = "1";
+  }, 200);
+  setTimeout(() => {
+    not.style.opacity = "0";
+  }, 5000);
+  setTimeout(() => {
+    not.remove();
+  }, 5200);
 }
 
 // ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ
@@ -421,10 +384,20 @@ function removeAdjacentSpaces(input) {
   return input.replace(/s{2,}/g, " ").trim();
 }
 
-//
+// перевод
+
+function translate(lang) {
+  localStorage.setItem("lang", lang);
+  const toTranslate = document.querySelectorAll(".t");
+  toTranslate.forEach((el) => {
+    const attr = "data-t-" + lang;
+    const tr = el.getAttribute(attr);
+    if (tr) {
+      el.textContent = tr;
+    }
+  });
+}
+
+//  подзагрузка настроек пользователя
 
 loadOptions();
-
-
-
-
