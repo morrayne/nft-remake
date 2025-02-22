@@ -194,22 +194,33 @@ header {
 }
 .just-right {
   width: 100%;
-  max-width: 360px;
-  height: fit-content;
+  max-width: 420px;
   min-height: 480px;
-  flex-direction: column;
-  gap: 12px;
+  max-height: 480px;
   padding: 12px;
-  overflow-y: scroll;
   border-radius: 16px;
+  flex-direction: column;
+  gap: 8px;
   box-shadow: 0 5px 5px var(--bl20), -5px -5px 5px var(--bl20);
   position: relative;
   z-index: 1;
 }
-.just-right .w-btn-o {
-  margin-left: auto;
+.just-right-c {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: scroll;
 }
-.just-right::-webkit-scrollbar {
+.just-right-c .b-btn-o {
+  margin-left: auto;
+  transition: 0.2s;
+}
+.just-right-c .w-btn {
+  margin-left: auto;
+  transition: 0.2s;
+}
+.just-right-c::-webkit-scrollbar {
   display: none;
 }
 .just-right-line {
@@ -221,7 +232,9 @@ header {
   flex-direction: column;
   justify-content: space-around;
 }
-
+.sub {
+  filter: invert(1);
+}
 
 /* PRE */
 
@@ -258,7 +271,8 @@ header {
 .round-img {
   max-width: 48px;
   width: 48px;
-  aspect-ratio: 1 / 1;
+  max-height: 48px;
+  height: 48px;
   border-radius: 50%;
 }
 .tr {
@@ -306,7 +320,7 @@ header {
   justify-content: space-between;
 }
 .inputs {
-  width: 48%;
+  width: 37%;
   height: 48px;
   border-radius: 8px;
   background-color: var(--gr20);
@@ -413,6 +427,7 @@ footer {
 .switch-holder {
   width: fit-content;
   gap: 18px;
+  align-items: center;
   position: relative;
   padding: 8px;
   border-radius: 8px;

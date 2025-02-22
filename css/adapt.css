@@ -38,6 +38,14 @@
     max-width: 100%;
     margin: 0;
   }
+  .comments-inputs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .inputs {
+    width: 100%;
+    height: 36px;
+  }
 }
 @media(max-width: 980px) {
   .footer-c .t {
@@ -172,14 +180,6 @@
   }
   .curve {
     display: none;
-  }
-  .comments-inputs {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .inputs {
-    width: 100%;
-    height: 36px;
   }
   .pre-left {
     flex-direction: column;

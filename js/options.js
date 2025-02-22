@@ -311,11 +311,13 @@ let notArrRu = [
   "Ваш выбор настроек был сохранен",
   "У вас недостаточно средств на балансе",
   "Данная функция находится в разработке",
+  "Вы больше не можете подписываться",
 ];
 let notArrEn = [
   "Your options choises were saved",
   "You don't have enough credits on your account",
   "This function is currently in development",
+  "You can not subscribe to any more people",
 ];
 
 // создание уведомления
@@ -397,7 +399,3 @@ function translate(lang) {
     }
   });
 }
-
-//  подзагрузка настроек пользователя
-
-loadOptions();

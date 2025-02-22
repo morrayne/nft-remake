@@ -147,5 +147,8 @@ if (document.fonts) {
     document.querySelectorAll(".switch-holder").forEach(function (switcher) {
       switcherChange(switcher, 0);
     });
+    setTimeout(() => {
+      loadOptions();
+    }, 200);
   });
 }
