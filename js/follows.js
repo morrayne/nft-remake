@@ -23,18 +23,6 @@ const surArr = [
   "Taylor",
 ];
 
-// локализация подписок
-
-const engSubText = ["follow", "following"];
-const ruSubText = ["следить", "отписаться"];
-let subTextArr = [];
-const reLang = localStorage.getItem("lang");
-if (reLang === "ru") {
-  subTextArr = ruSubText;
-} else {
-  subTextArr = engSubText;
-}
-
 // первоначальное создание строчек подписок
 
 let followParent = document.querySelector(".just-right-c");
@@ -53,7 +41,9 @@ if (document.fonts) {
       followParent.appendChild(person);
       // визуал для уже подписанных аккаунтов
       person.children[2].classList.add("sub");
-      person.children[2].children[0].textContent = subTextArr[1];
+      person.children[2].children[0].setAttribute("data-t-ru", "отписаться");
+      person.children[2].children[0].setAttribute("data-t-en", "following");
+      replaceText(person.children[2]);
     }
     // Создание новых рядов подписок
     for (let i = savedFollowsLength; i < 25; i++) {
@@ -67,11 +57,14 @@ if (document.fonts) {
     const elem = followParent.querySelectorAll(".b-btn-o")[0];
     if (theHertaCounter == -1) {
       elem.classList.remove("sub");
-      elem.children[0].textContent = subTextArr[0];
+      elem.children[0].setAttribute("data-t-ru", "следить");
+      elem.children[0].setAttribute("data-t-en", "follow");
     } else {
       elem.classList.add("sub");
-      elem.children[0].textContent = subTextArr[1];
+      elem.children[0].setAttribute("data-t-ru", "отписаться");
+      elem.children[0].setAttribute("data-t-en", "following");
     }
+    replaceText(elem);
   });
 }
 
@@ -87,11 +80,14 @@ followParent.addEventListener("click", function (event) {
     // визуальное изменение кропки
     if (theHertaCounter == -1) {
       elem.classList.add("sub");
-      elem.children[0].textContent = subTextArr[1];
+      elem.children[0].setAttribute("data-t-ru", "отписаться");
+      elem.children[0].setAttribute("data-t-en", "following");
     } else {
       elem.classList.remove("sub");
-      elem.children[0].textContent = subTextArr[0];
+      elem.children[0].setAttribute("data-t-ru", "следить");
+      elem.children[0].setAttribute("data-t-en", "follow");
     }
+    replaceText(elem);
     theHertaCounter = theHertaCounter * -1;
     // сохранение ее значения в localStogare
     localStorage.setItem("theHertaSub", theHertaCounter);
@@ -99,12 +95,16 @@ followParent.addEventListener("click", function (event) {
     let elem = el.closest(".b-btn-o");
     if (elem && !elem.classList.contains("sub") && followedArr.length < 6) {
       elem.classList.add("sub");
-      elem.children[0].textContent = subTextArr[1];
+      elem.children[0].setAttribute("data-t-ru", "отписаться");
+      elem.children[0].setAttribute("data-t-en", "following");
+      replaceText(elem);
       // добавление объекта по индексу этой кнопки в подписки
       followedArr.push(currentFollowsArr[index - 1]);
     } else if (elem && elem.classList.contains("sub")) {
       elem.classList.remove("sub");
-      elem.children[0].textContent = subTextArr[0];
+      elem.children[0].setAttribute("data-t-ru", "следить");
+      elem.children[0].setAttribute("data-t-en", "follow");
+      replaceText(elem);
       // удаление объекта по индексу этой кнопки в подписки
       followedArr.splice(followedArr.indexOf(currentFollowsArr[index - 1]), 1);
     } else {
@@ -120,13 +120,23 @@ function createFollowObj(id) {
   const name = nameArr[Math.floor(Math.random() * nameArr.length)];
   const surName = surArr[Math.floor(Math.random() * surArr.length)];
   const fullName = name + " " + surName;
-
   return {
     name: fullName,
     src: imgScr[Math.floor(Math.random() * imgScr.length)],
     value: (Math.floor(Math.random() * (99 - 10 + 1)) + 10) * 10,
     index: id,
   };
+}
+
+// замена текста
+
+function replaceText(btn) {
+  const parentEl = document.querySelector(".just-right").children[0];
+  if (removeAdjacentSpaces(parentEl.textContent) === "Best sellers") {
+    btn.children[0].textContent = btn.children[0].getAttribute("data-t-en");
+  } else {
+    btn.children[0].textContent = btn.children[0].getAttribute("data-t-ru");
+  }
 }
 
 // создание элемента по объекту
@@ -149,7 +159,8 @@ function createFollow(obj) {
   blackButton.classList.add("b-btn-o");
   const blackButtonText = document.createElement("span");
   blackButtonText.classList.add("t", "b", "t-16");
-  blackButtonText.textContent = subTextArr[0];
+  blackButtonText.setAttribute("data-t-en", "follow");
+  blackButtonText.setAttribute("data-t-ru", "следить");
   textsCont.append(textTop, textBot);
   blackButton.appendChild(blackButtonText);
   holder.append(img, textsCont, blackButton);
