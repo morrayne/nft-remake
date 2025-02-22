@@ -79,7 +79,8 @@
   }
   .just-right {
     max-width: unset;
-    width: 70%;
+    min-width: 270px;
+    width: 80%;
   }
 }
 @media(max-width: 880px) {
@@ -232,7 +233,27 @@
   .holder .t-20 {
     font-size: 14px;
   }
+  .round-img {
+    max-width: 36px;
+    max-height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .td1-c {
+    gap: 8px;
+  }
 }
-@media(max-width: 400px) {
-  
+@media(max-width: 440px) {
+  .t-64 {
+    font-size: 32px;
+  }
+  .t-32 {
+    font-size: 24px;
+  }
+  .discover-btn-c {
+    gap: 8px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
