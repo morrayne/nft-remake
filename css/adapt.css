@@ -39,12 +39,12 @@
     margin: 0;
   }
   .comments-inputs {
-    flex-direction: column;
     gap: 8px;
+    flex-wrap: wrap;
   }
   .inputs {
-    width: 100%;
-    height: 36px;
+    min-width: 60%;
+    min-height: 36px;
   }
 }
 @media(max-width: 980px) {
@@ -120,6 +120,17 @@
   }
   .td2 {
     display: none;
+  }
+  .comments-inputs {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .inputs {
+    min-width: 60%;
+    max-height: 36px;
+  }
+  #submit {
+    height: 36px;
   }
 }
 @media(max-width: 640px) {

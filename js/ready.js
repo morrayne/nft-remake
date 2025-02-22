@@ -1,7 +1,24 @@
 // ВЕРХНЕЕ СЛАЙД ШОУ
 
 let discoverImgCounter = 0;
-const images = Array.from(document.querySelector(".discover-img-c").children);
+let images = [];
+let descriptions = [];
+for (
+  let i = 0;
+  i < document.querySelector(".discover-img-c").children.length;
+  i++
+) {
+  if (
+    document
+      .querySelector(".discover-img-c")
+      .children[i].classList.contains("discover-img")
+  ) {
+    images.push(document.querySelector(".discover-img-c").children[i]);
+  }
+  if (document.getElementById("more").children[i]) {
+    descriptions.push(document.getElementById("more").children[i]);
+  }
+}
 document
   .querySelector(".discover-point-c")
   .addEventListener("click", function (event) {
@@ -21,6 +38,11 @@ document
     images.forEach((image) => {
       image.style.transform = "translateX(-" + gap * discoverImgCounter + "px)";
     });
+    const descGap = document.getElementById("more").offsetWidth;
+    descriptions.forEach((desc) => {
+      desc.style.transform =
+        "translateX(-" + descGap * discoverImgCounter + "px)";
+    });
   });
 
 // СОЗДАНИЕ СЛУЧАЙНЫХ ЧИСЕЛ У ТАБЛИЦЫ
@@ -37,6 +59,7 @@ table.querySelectorAll("span").forEach(function (el) {
 
 // НАВИГАЦИЯ
 
+const screenWidth = screen.width;
 document.querySelectorAll(".nav").forEach(function (el) {
   // распределение классов для адаптации
   for (let i = 0; i < el.children.length; i++) {
@@ -44,7 +67,6 @@ document.querySelectorAll(".nav").forEach(function (el) {
   }
 
   // рабочая часть навигации
-  const screenWidth = screen.width;
   el.addEventListener("click", function (event) {
     let targetElement;
     const buttons = el.querySelectorAll("button");
@@ -72,7 +94,7 @@ document
   .addEventListener("click", function (event) {
     if (event.target.closest(".b-btn")) {
       createNot(1);
-    } 
+    }
   });
 document.querySelectorAll(".nocontent").forEach(function (el) {
   el.addEventListener("click", function () {
@@ -152,3 +174,33 @@ if (document.fonts) {
     }, 200);
   });
 }
+
+//
+
+let moreCounter = -1;
+document
+  .querySelector(".discover-btn-c")
+  .addEventListener("click", function (event) {
+    const btn = event.target.closest("button");
+    if (btn && btn.classList.contains("b-btn")) {
+      if (moreCounter === -1) {
+        document.getElementById("more").style.display = "flex";
+        setTimeout(() => {
+          document.getElementById("more").style.opacity = "1";
+        }, 200);
+      } else {
+        document.getElementById("more").style.opacity = "0";
+        setTimeout(() => {
+          document.getElementById("more").style.display = "none";
+        }, 200);
+      }
+      moreCounter = moreCounter * -1;
+    } else {
+      const elementPosition = document.getElementById("table").getBoundingClientRect().top + window.scrollY;
+      let offsetPosition = elementPosition - 90;
+      if (screenWidth < 720) {
+        offsetPosition = elementPosition - 120;
+      }
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  });
