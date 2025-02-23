@@ -196,7 +196,9 @@ document
       }
       moreCounter = moreCounter * -1;
     } else {
-      const elementPosition = document.getElementById("table").getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        document.getElementById("table").getBoundingClientRect().top +
+        window.scrollY;
       let offsetPosition = elementPosition - 90;
       if (screenWidth < 720) {
         offsetPosition = elementPosition - 120;
@@ -204,3 +206,29 @@ document
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   });
+
+//
+
+document.querySelectorAll(".just-line").forEach(function (el) {
+  const cover = document.createElement("div");
+  cover.classList.add("line-cover");
+  el.appendChild(cover);
+});
+
+let knowMoreCounter = 0;
+document.getElementById("knowMore").addEventListener("click", function () {
+  if (knowMoreCounter < document.querySelectorAll(".line-cover").length) {
+    document.querySelectorAll(".line-cover")[knowMoreCounter].style.width =
+      "0px";
+    knowMoreCounter++;
+  }
+});
+
+//
+
+let session = localStorage.getItem("session") || 0;
+session++;
+let formattedSession = String(session).padStart(8, "0");
+document.querySelector(".options-right").children[1].textContent =
+  "uid: " + formattedSession;
+localStorage.setItem("session", session);
